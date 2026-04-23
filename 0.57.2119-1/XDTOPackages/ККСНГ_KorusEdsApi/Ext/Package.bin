@@ -1,0 +1,845 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" elementFormQualified="true" attributeFormQualified="false">
+	<valueType name="BarcodeType" base="xs:string" variety="Atomic">
+		<enumeration>None</enumeration>
+		<enumeration>Code128</enumeration>
+		<enumeration>Ean8</enumeration>
+		<enumeration>Ean13</enumeration>
+	</valueType>
+	<valueType name="Decimal17-2" base="xs:decimal" variety="Atomic" totalDigits="17" fractionDigits="2"/>
+	<valueType name="String1000" base="xs:string" variety="Atomic" maxLength="1000"/>
+	<valueType name="String128" base="xs:string" variety="Atomic"/>
+	<valueType name="String200" base="xs:string" variety="Atomic" maxLength="200"/>
+	<valueType name="String2000" base="xs:string" variety="Atomic" maxLength="2000"/>
+	<valueType name="String255" base="xs:string" variety="Atomic" maxLength="255"/>
+	<valueType name="String256" base="xs:string" variety="Atomic" maxLength="256"/>
+	<valueType name="String32" base="xs:string" variety="Atomic" maxLength="32"/>
+	<valueType name="String46" base="xs:string" variety="Atomic" maxLength="46"/>
+	<valueType name="String50" base="xs:string" variety="Atomic" maxLength="50"/>
+	<valueType name="String64" base="xs:string" variety="Atomic" maxLength="64"/>
+	<valueType name="String3" base="xs:string" variety="Atomic" maxLength="3"/>
+	<valueType name="String500" base="xs:string" variety="Atomic" maxLength="500"/>
+	<valueType name="String512" base="xs:string" variety="Atomic" maxLength="512"/>
+	<valueType name="String60" base="xs:string" variety="Atomic" maxLength="60"/>
+	<valueType name="String12" base="xs:string" variety="Atomic" maxLength="12"/>
+	<valueType name="String9" base="xs:string" variety="Atomic" maxLength="9"/>
+	<valueType name="String13" base="xs:string" variety="Atomic" maxLength="13"/>
+	<valueType name="String100" base="xs:string" variety="Atomic" maxLength="100"/>
+	<valueType name="DocumentEventType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Created</enumeration>
+		<enumeration xsi:type="xs:string">Delivered</enumeration>
+		<enumeration xsi:type="xs:string">Accepted</enumeration>
+		<enumeration xsi:type="xs:string">Signed</enumeration>
+		<enumeration xsi:type="xs:string">Rejected</enumeration>
+		<enumeration xsi:type="xs:string">TicketReceived</enumeration>
+		<enumeration xsi:type="xs:string">Received</enumeration>
+		<enumeration xsi:type="xs:string">TicketSended</enumeration>
+		<enumeration xsi:type="xs:string">MovedToTrash</enumeration>
+		<enumeration xsi:type="xs:string">Deleted</enumeration>
+		<enumeration xsi:type="xs:string">Sended</enumeration>
+		<enumeration xsi:type="xs:string">DeliveredForReciever</enumeration>
+		<enumeration xsi:type="xs:string">Revoked</enumeration>
+		<enumeration xsi:type="xs:string">ReceivedRequestReview</enumeration>
+		<enumeration xsi:type="xs:string">RequestedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">RejectedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">AcceptedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">SignatureReject</enumeration>
+		<enumeration xsi:type="xs:string">RestoredFromTrash</enumeration>
+	</valueType>
+	<valueType name="ExtendedDocumentType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Document</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNotificationOfReceiveConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNotificationOfDocument</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmationOfReceiveNotificationOfDocument</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNotificationOfSendConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNotificationOfSendConfirmationOfReceiveNotificationOfDocument</enumeration>
+		<enumeration xsi:type="xs:string">ClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNotificationOfClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">AcceptDocument</enumeration>
+		<enumeration xsi:type="xs:string">RejectSignature</enumeration>
+		<enumeration xsi:type="xs:string">AvoidanceRequest</enumeration>
+		<enumeration xsi:type="xs:string">AvoidanceRequestClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveConfirmationOfReceiveNotificationOfDocument</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveConfirmationOfClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmationOfClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmationOfClarificationNoticeForOperator</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmationForOperator</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmationOfReceiveNotificationOfDocumentForOperator</enumeration>
+	</valueType>
+	<valueType name="TransportDocumentType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">ReceiveNotice</enumeration>
+		<enumeration xsi:type="xs:string">SendConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveConfirmation</enumeration>
+		<enumeration xsi:type="xs:string">ClarificationNotice</enumeration>
+		<enumeration xsi:type="xs:string">Invoice</enumeration>
+		<enumeration xsi:type="xs:string">CorrectionInvoice</enumeration>
+		<enumeration xsi:type="xs:string">Torg12SellerTitle</enumeration>
+		<enumeration xsi:type="xs:string">Torg12BuyerTitle</enumeration>
+		<enumeration xsi:type="xs:string">AcceptanceCertificatePerformerTitle</enumeration>
+		<enumeration xsi:type="xs:string">AcceptanceCertificateCustomerTitle</enumeration>
+		<enumeration xsi:type="xs:string">Document</enumeration>
+		<enumeration xsi:type="xs:string">RejectSignature</enumeration>
+		<enumeration xsi:type="xs:string">AvoidanceRequest</enumeration>
+		<enumeration xsi:type="xs:string">AcceptSignature</enumeration>
+		<enumeration xsi:type="xs:string">ReceiveNoticeRoaming</enumeration>
+		<enumeration xsi:type="xs:string">ClarificationNoticeRoaming</enumeration>
+		<enumeration xsi:type="xs:string">UpdInvoice</enumeration>
+		<enumeration xsi:type="xs:string">UpdInvoiceSellerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdInvoiceBuyerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdSellerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdBuyerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdCorrectionInvoice</enumeration>
+		<enumeration xsi:type="xs:string">UpdCorrectionInvoiceSellerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdCorrectionInvoiceBuyerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdCorrectionSellerInfo</enumeration>
+		<enumeration xsi:type="xs:string">UpdCorrectionBuyerInfo</enumeration>
+		<enumeration xsi:type="xs:string">DocumentOfTransferOfWorkResultsPerformerInfo</enumeration>
+		<enumeration xsi:type="xs:string">DocumentOfTransferOfWorkResultsCustomerInfo</enumeration>
+		<enumeration xsi:type="xs:string">DocumentOfTransferOfGoodsSellerInfo</enumeration>
+		<enumeration xsi:type="xs:string">DocumentOfTransferOfGoodsBuyerInfo</enumeration>
+	</valueType>
+	<valueType name="DocumentRelationType" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Productive</enumeration>
+		<enumeration xsi:type="xs:string">Test</enumeration>
+	</valueType>
+	<valueType name="Actions" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">None</enumeration>
+		<enumeration xsi:type="xs:string">Add</enumeration>
+		<enumeration xsi:type="xs:string">Reject</enumeration>
+		<enumeration xsi:type="xs:string">AcceptRevoke</enumeration>
+		<enumeration xsi:type="xs:string">Accept</enumeration>
+		<enumeration xsi:type="xs:string">Revoke</enumeration>
+		<enumeration xsi:type="xs:string">Sign</enumeration>
+		<enumeration xsi:type="xs:string">Send</enumeration>
+		<enumeration xsi:type="xs:string">Trash</enumeration>
+		<enumeration xsi:type="xs:string">Edit</enumeration>
+		<enumeration xsi:type="xs:string">RejectWithTicket</enumeration>
+		<enumeration xsi:type="xs:string">Delete</enumeration>
+		<enumeration xsi:type="xs:string">EditableRoute</enumeration>
+		<enumeration xsi:type="xs:string">AcceptWithTicket</enumeration>
+		<enumeration xsi:type="xs:string">SubstituteSigner</enumeration>
+		<enumeration xsi:type="xs:string">CreateSignatureTicket</enumeration>
+		<enumeration xsi:type="xs:string">AvoidanceRequest</enumeration>
+		<enumeration xsi:type="xs:string">RejectAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">AcceptAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">PackageRouteSync</enumeration>
+		<enumeration xsi:type="xs:string">RemoveFromPackage</enumeration>
+		<enumeration xsi:type="xs:string">AssignableToSelf</enumeration>
+		<enumeration xsi:type="xs:string">AcceptWithoutSign</enumeration>
+		<enumeration xsi:type="xs:string">SignReplyTicket</enumeration>
+		<enumeration xsi:type="xs:string">SignReceiveNtfcOfDoc</enumeration>
+	</valueType>
+	<valueType name="DocumentDirection" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">In</enumeration>
+		<enumeration xsi:type="xs:string">Out</enumeration>
+	</valueType>
+	<valueType name="DocumentStatus" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">None</enumeration>
+		<enumeration xsi:type="xs:string">Draft</enumeration>
+		<enumeration xsi:type="xs:string">ToSign</enumeration>
+		<enumeration xsi:type="xs:string">Prepared</enumeration>
+		<enumeration xsi:type="xs:string">IsRead</enumeration>
+		<enumeration xsi:type="xs:string">OnAgreement</enumeration>
+		<enumeration xsi:type="xs:string">Signed</enumeration>
+		<enumeration xsi:type="xs:string">Rejected</enumeration>
+		<enumeration xsi:type="xs:string">Accepted</enumeration>
+		<enumeration xsi:type="xs:string">OnRevocation</enumeration>
+		<enumeration xsi:type="xs:string">Revoked</enumeration>
+		<enumeration xsi:type="xs:string">Sended</enumeration>
+		<enumeration xsi:type="xs:string">Delivered</enumeration>
+		<enumeration xsi:type="xs:string">Received</enumeration>
+		<enumeration xsi:type="xs:string">NoRoute</enumeration>
+		<enumeration xsi:type="xs:string">RequestedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">RejectedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">AcceptedAvoidance</enumeration>
+		<enumeration xsi:type="xs:string">ClarificationRequested</enumeration>
+		<enumeration xsi:type="xs:string">WaitingForSend</enumeration>
+	</valueType>
+	<valueType name="Participant" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">None</enumeration>
+		<enumeration xsi:type="xs:string">Sender</enumeration>
+		<enumeration xsi:type="xs:string">Receiver</enumeration>
+		<enumeration xsi:type="xs:string">Operator</enumeration>
+	</valueType>
+	<valueType name="long" base="xs:long" variety="Atomic"/>
+	<objectType name="type_ArrayOfLong" ordered="false">
+		<property name="long" type="xs:long" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_Attachment" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Uuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DocumentId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Filename" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MimeType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Content" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfAttachment" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Attachment" type="d3p1:type_Attachment" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_DocumentRelation" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="ParentId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Relation" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Description" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentRelation" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentRelation" type="d3p1:type_DocumentRelation" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_Document" open="true" ordered="false" sequenced="true">
+		<property name="Actions" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Attachments" type="d3p1:type_ArrayOfAttachment" lowerBound="0" nillable="true"/>
+		<property name="BarcodeType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="TypeId" type="xs:integer"/>
+		<property name="Id" type="xs:integer" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="TypeName" type="d3p1:String255" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentTypeCode" type="d3p1:String32" nillable="true"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="BarcodeValue" type="d3p1:String2000" lowerBound="0" nillable="true"/>
+		<property name="SenderId" type="xs:integer" nillable="true"/>
+		<property name="ReceiverId" type="xs:integer" nillable="true"/>
+		<property name="ParticipantId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ParticipantName" type="d3p1:String64" lowerBound="0" nillable="true"/>
+		<property name="Status" type="xs:string" nillable="true"/>
+		<property name="Date" type="xs:dateTime" nillable="true"/>
+		<property name="RequestSign" type="xs:boolean" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Number" type="d3p1:String1000" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="NetSum" type="d3p1:Decimal17-2" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="VatSum" type="d3p1:Decimal17-2" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="TotalSum" type="d3p1:Decimal17-2" nillable="true"/>
+		<property name="IsMarked" type="xs:boolean" nillable="true"/>
+		<property name="Created" type="xs:dateTime" nillable="true"/>
+		<property name="SendDate" type="xs:dateTime" nillable="true"/>
+		<property name="ReceiveDate" type="xs:dateTime" nillable="true"/>
+		<property name="IsDocflowCompleted" type="xs:boolean" nillable="true"/>
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ContractNumber" type="d3p1:String50" lowerBound="0" nillable="true"/>
+		<property name="ContractDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Type" type="xs:string" nillable="true"/>
+		<property name="FormType" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="SellerCode" type="d3p1:String46" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="BuyerCode" type="d3p1:String46" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="FormatVersion" type="d3p1:String128" lowerBound="0" nillable="true"/>
+		<property name="RevokeReason" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ContractDescription" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IsRoaming" type="xs:boolean" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Content" type="d3p1:type_FileContent" lowerBound="0" nillable="true"/>
+		<property name="IsPrintable" type="xs:boolean" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Relations" type="d3p1:type_ArrayOfDocumentRelation" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="StatusName" type="d3p1:String200" nillable="true"/>
+		<property name="RejectReason" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Filename" type="d3p1:String255" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="SenderName" type="d3p1:String1000" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ReceiverName" type="d3p1:String1000" lowerBound="0" nillable="true"/>
+		<property name="ExistRouteSigner" type="xs:boolean" nillable="true"/>
+		<property name="DocumentRelationType" type="xs:string" nillable="true"/>
+		<property name="StatusChanged" type="xs:dateTime" nillable="true"/>
+		<property name="PackageId" type="xs:integer" nillable="true"/>
+		<property name="FormatCode" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocument" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Document" type="d3p1:type_Document" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_FileContent" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Filename" type="d3p1:String255" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MimeType" type="d3p1:String255" lowerBound="0" nillable="true"/>
+		<property name="Content" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_Credentials" open="true" ordered="false">
+		<property name="Username" type="xs:string" lowerBound="0"/>
+		<property name="Password" type="xs:string" lowerBound="0"/>
+		<property name="Code" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ApiKey" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_LogonResponse" open="true" ordered="false">
+		<property name="Token" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="type_Company" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="OperatorCode" type="d3p1:String3" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Code" type="d3p1:String46" lowerBound="0"/>
+		<property name="Id" type="xs:integer"/>
+		<property name="CompanyType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="FullName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="LastName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="FirstName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MiddleName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Inn" type="d3p1:String12" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Kpp" type="d3p1:String9" lowerBound="0" nillable="true"/>
+		<property name="RegistryNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="RegistrationRequisites" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfCompany" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Company" type="d3p1:type_Company" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_ClientSearchInfo" open="true" ordered="false">
+		<property name="Inn" type="xs:string" nillable="true"/>
+		<property name="Kpp" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Ogrn" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_Subscription" open="true" ordered="false">
+		<property name="Created" type="xs:dateTime"/>
+		<property name="Login" type="xs:string"/>
+		<property name="IsRestricted" type="xs:boolean"/>
+		<property name="Token" type="xs:string"/>
+		<property name="UserId" type="xs:long"/>
+	</objectType>
+	<objectType name="type_ArrayOfSubscription" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Subscription" type="d3p1:type_Subscription" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_DocumentCard" open="true" ordered="false">
+		<property name="Comment" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Number" type="d3p1:String1000"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="RequestSign" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Contract" type="d3p1:type_DocumentRef" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="NetSum" type="d3p1:Decimal17-2" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="VatSum" type="d3p1:Decimal17-2" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="TotalSum" type="d3p1:Decimal17-2" lowerBound="0" nillable="true"/>
+		<property name="TypeCode" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Content" type="d3p1:type_FileContent"/>
+		<property name="Relation" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ParentDocumentId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Barcode" type="d3p1:type_Barcode" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Attributes" type="d3p1:type_ArrayKeyValueObject" lowerBound="0" upperBound="1" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Properties" type="d3p1:type_ArrayStringKeyValue" lowerBound="0" upperBound="1" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Signature" type="d3p1:type_Signature" lowerBound="0"/>
+	</objectType>
+	<objectType name="type_DocumentRef" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Number" type="d3p1:String50" lowerBound="0" nillable="true"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_Signature" open="true" ordered="false">
+		<property name="Content" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+		<property name="MchdAccessMode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdFile" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+		<property name="MchdFileName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdSignature" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+		<property name="MchdUuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdInn" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdConfidantInn" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SignerCode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Uuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Chain" type="d3p1:type_SignatureMchdIdentifyObject" lowerBound="0" upperBound="1" form="Element"/>
+	</objectType>
+	<objectType name="type_MchdData">
+		<property name="Uuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StartDate" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="InternalRegistrationNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="InternalRegistrationDate" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="MchdViewType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="AccessMode" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_SignatureWithTicket" open="true" ordered="false">
+		<property name="Uuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Content" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+		<property name="SignerCode" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_Barcode" open="true" ordered="false">
+		<property name="Type" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Value" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_KeyValueObject" open="true" ordered="false">
+		<property name="Key" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="Value" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayKeyValueObject" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="KeyValueObject" type="d3p1:type_KeyValueObject" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="type_StringKeyValue" open="true" ordered="false">
+		<property name="Key" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Value" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayStringKeyValue" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="StringKeyValue" type="d3p1:type_StringKeyValue" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="type_DocumentEvent" open="true" ordered="false">
+		<property name="Id" type="xs:long" nillable="false"/>
+		<property name="DocumentId" type="xs:long" nillable="false"/>
+		<property name="TicketId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="EventType" type="xs:string" nillable="false"/>
+		<property name="Date" type="xs:dateTime" nillable="false"/>
+		<property name="DocumentRelationType" type="xs:string" nillable="false"/>
+		<property name="ExtendedTicketType" type="xs:string" nillable="true"/>
+		<property name="TicketType" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="type_DocumentEvents" open="true" ordered="false">
+		<property name="Totals" type="xs:integer" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Events" type="d3p1:type_ArrayOfDocumentEvent" lowerBound="0" upperBound="1"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentEvent">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentEvent" type="d3p1:type_DocumentEvent" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_SignedContent" open="true" ordered="false">
+		<property name="Content" type="xs:base64Binary" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Filename" type="d3p1:String255" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MimeType" type="d3p1:String255" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdAccessMode" type="d3p1:String255" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdUuid" type="d3p1:String255" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdInn" type="d3p1:String12" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdConfidantInn" type="d3p1:String12" lowerBound="0" nillable="true"/>
+		<property name="MchdFile" type="xs:base64Binary" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdFileName" type="d3p1:String255" lowerBound="0"/>
+		<property name="MchdSignature" type="xs:base64Binary" lowerBound="0"/>
+		<property name="Signature" type="xs:base64Binary"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Chain" type="d3p1:type_SignatureMchdIdentifyObject" lowerBound="0" form="Element"/>
+	</objectType>
+	<objectType name="type_AcceptanceCertificateAcceptInfo" open="true" ordered="false">
+		<property name="Date" type="xs:dateTime" lowerBound="1"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String2000" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Warrant" type="d3p1:type_Warrant"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Acceptor" type="d3p1:type_Signer"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Action" type="d3p1:Actions" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Claim" type="d3p1:String2000" lowerBound="0"/>
+	</objectType>
+	<objectType name="type_Warrant" open="true" ordered="false">
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Number" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Issuer" type="d3p1:type_WarrantIssuer"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Subject" type="d3p1:type_WarrantSubject"/>
+	</objectType>
+	<objectType name="type_WarrantIssuer" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Person" type="d3p1:type_Person"/>
+		<property name="Title" type="xs:string"/>
+		<property name="Info" type="xs:string"/>
+		<property name="Organization" type="xs:string"/>
+	</objectType>
+	<objectType name="type_Person" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="FirstName" type="d3p1:String60"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="LastName" type="d3p1:String60"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MiddleName" type="d3p1:String60" lowerBound="0"/>
+	</objectType>
+	<objectType name="type_WarrantSubject" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Person" type="d3p1:type_Person"/>
+		<property name="Title" type="xs:string"/>
+		<property name="Info" type="xs:string"/>
+	</objectType>
+	<objectType name="type_Signer" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Person" type="d3p1:type_Person"/>
+		<property name="Title" type="xs:string"/>
+	</objectType>
+	<objectType name="type_Torg12AcceptInfo" open="true" ordered="false">
+		<property name="Date" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String2000" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Warrant" type="d3p1:type_Warrant"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Acceptor" type="d3p1:type_Signer"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Consignee" type="d3p1:type_Signer"/>
+	</objectType>
+	<objectType name="type_ArrayOfTicket" ordered="false">
+		<property name="Ticket" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_Ticket" open="true" ordered="false">
+		<property name="Id" type="xs:long"/>
+		<property name="DocumentId" type="xs:long"/>
+		<property name="Uuid" type="xs:string"/>
+		<property name="ParentUuid" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Direction" type="d3p1:DocumentDirection"/>
+		<property name="Type" type="xs:string"/>
+		<property name="ExtendedType" type="xs:string"/>
+		<property name="Date" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="type_ArrayOfTicketFilter" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="TicketFilter" type="d3p1:type_TicketFilter" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_TicketFilter" open="true" ordered="false">
+		<property name="DocumentNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Skip" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Take" type="xs:integer" nillable="true"/>
+		<property name="To" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="From" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="DocumentTypeId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="ParticipantId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Query" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_TicketInfo" open="true" ordered="false">
+		<property name="Id" type="xs:long"/>
+		<property name="DocumentId" type="xs:long"/>
+		<property name="Uuid" type="xs:string"/>
+		<property name="ParentUuid" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Direction" type="d3p1:DocumentDirection"/>
+		<property name="Type" type="xs:string"/>
+		<property name="ExtendedType" type="xs:string"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Filename" type="xs:string"/>
+		<property name="DocumentTypeName" type="xs:string"/>
+		<property name="DocumentDescription" type="xs:string"/>
+		<property name="SenderType" type="xs:string"/>
+		<property name="SenderName" type="xs:string"/>
+		<property name="ReplyType" type="xs:string"/>
+		<property name="ReplyDocumentTypeName" type="xs:string"/>
+		<property name="ReplyExtendedType" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Status" type="d3p1:DocumentStatus"/>
+	</objectType>
+	<objectType name="type_ArrayOfTicketInfo" ordered="false">
+		<property name="TicketInfo" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_TicketDetails" open="true" ordered="false">
+		<property name="Id" type="xs:long"/>
+		<property name="DocumentId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="Uuid" type="xs:string"/>
+		<property name="ParentUuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Direction" type="d3p1:DocumentDirection"/>
+		<property name="Type" type="xs:string"/>
+		<property name="ExtendedType" type="xs:string"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Content" type="d3p1:type_FileContent" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Signature" type="d3p1:type_Signature" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property name="NeedReply" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfSignature" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Signature" type="d3p1:type_Signature" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_ArrayOfTicketDetails" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="TicketDetails" type="d3p1:type_TicketDetails" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_DocumentSign" open="true" ordered="false">
+		<property name="Id" type="xs:long"/>
+		<property name="CertificateId" type="xs:long" nillable="true"/>
+		<property name="UserId" type="xs:int" nillable="true"/>
+		<property name="Image" type="xs:base64Binary"/>
+		<property name="Signed" type="xs:dateTime"/>
+		<property name="ClientId" type="xs:long"/>
+		<property name="AbonentCode" type="xs:string"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentSign" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentSign" type="d3p1:type_DocumentSign" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_SignatureDetails" open="true" ordered="false">
+		<property name="Title" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Person" type="d3p1:type_Person"/>
+		<property name="Organization" type="xs:string" lowerBound="0"/>
+		<property name="Ogrn" type="xs:string" lowerBound="0"/>
+		<property name="Inn" type="xs:string"/>
+		<property name="Begin" type="xs:dateTime"/>
+		<property name="End" type="xs:dateTime"/>
+		<property name="Thumbprint" type="xs:string"/>
+		<property name="Image" type="xs:base64Binary"/>
+	</objectType>
+	<objectType name="type_DocumentRouteStage" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long"/>
+		<property name="RoleId" type="xs:long"/>
+		<property name="Number" type="xs:long"/>
+		<property name="IsMandatory" type="xs:boolean"/>
+		<property name="IsVisible" type="xs:boolean"/>
+		<property name="Sequence" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="RoleName" type="xs:string"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Side" type="d3p1:Participant"/>
+		<property name="Period" type="xs:long" lowerBound="0" upperBound="1" nillable="true"/>
+		<property name="PeriodDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="UserId" type="xs:long" lowerBound="0" upperBound="1" nillable="true"/>
+		<property name="UserLogin" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="UserName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Signed" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="IsUserEditable" type="xs:boolean"/>
+		<property name="IsEditable" type="xs:boolean"/>
+		<property name="ProcessedById" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="ProcessedByLogin" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ProcessedByUsername" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentRouteStage" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentRouteStage" type="d3p1:type_DocumentRouteStage" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_ApiDocumentFilter" open="true" ordered="false">
+		<property name="Folder" type="xs:string"/>
+		<property name="ParticipantId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="DocumentTypeCode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StatusId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="From" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="To" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="CreatedFrom" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="CreatedTo" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="IsMine" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="UserId" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="int" type="xs:long" lowerBound="0" upperBound="-1"/>
+			</typeDef>
+		</property>
+		<property name="RoleId" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="int" type="xs:long" lowerBound="0" upperBound="-1"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="type_UniversalDocumentAcceptInfo" open="true" ordered="false">
+		<property name="AcceptanceCode" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="ResultCode" lowerBound="0" nillable="true">
+					<typeDef xsi:type="ValueType" base="xs:string">
+						<enumeration xsi:type="xs:string">AcceptedNoDisaccord</enumeration>
+						<enumeration xsi:type="xs:string">AcceptedDisaccord</enumeration>
+						<enumeration xsi:type="xs:string">NotAccepted</enumeration>
+					</typeDef>
+				</property>
+				<property name="DocumentName" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="DocumentTypeCode" lowerBound="0" nillable="true">
+					<typeDef xsi:type="ValueType" base="xs:string">
+						<enumeration xsi:type="xs:string">AcceptanceDocumentDisaccord</enumeration>
+						<enumeration xsi:type="xs:string">DocumentDisaccord</enumeration>
+					</typeDef>
+				</property>
+				<property name="BuyerDocumentNumber" type="xs:string" lowerBound="0" nillable="true"/>
+				<property name="DocumentDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+				<property name="FileId" type="xs:string" lowerBound="0" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="Date" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="DealSummary" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DocumentSigner" lowerBound="0" upperBound="1" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property name="DocumentSignerInfo" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property name="AuthorityMethod">
+							<typeDef xsi:type="ValueType" base="xs:string">
+								<enumeration xsi:type="xs:string">1</enumeration>
+								<enumeration>2</enumeration>
+								<enumeration>3</enumeration>
+								<enumeration>4</enumeration>
+								<enumeration>5</enumeration>
+								<enumeration>6</enumeration>
+							</typeDef>
+						</property>
+						<property name="MchdFile" lowerBound="0" upperBound="-1" nillable="true">
+							<typeDef xsi:type="ObjectType">
+								<property name="AttorneyDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+								<property name="InformationSystem" type="xs:string" lowerBound="0" nillable="true"/>
+								<property name="SingleNumber" type="xs:string" lowerBound="0" nillable="true"/>
+							</typeDef>
+						</property>
+						<property name="Signer" lowerBound="0" upperBound="-1" nillable="true">
+							<typeDef xsi:type="ObjectType">
+								<property name="Inn" type="xs:string" lowerBound="0" nillable="true"/>
+								<property name="Name" type="xs:string" lowerBound="0" nillable="true"/>
+								<property name="Person" lowerBound="0" nillable="true">
+									<typeDef xsi:type="ObjectType">
+										<property name="FirstName" type="xs:string" lowerBound="0" nillable="true"/>
+										<property name="LastName" type="xs:string" lowerBound="0" nillable="true"/>
+										<property name="MiddleName" type="xs:string" lowerBound="0" nillable="true"/>
+									</typeDef>
+								</property>
+								<property name="RegistrationRequisites" type="xs:string" lowerBound="0" nillable="true"/>
+								<property name="SignerType">
+									<typeDef xsi:type="ValueType" base="xs:string">
+										<enumeration xsi:type="xs:string">Individual</enumeration>
+										<enumeration xsi:type="xs:string">Organization</enumeration>
+										<enumeration xsi:type="xs:string">Physical</enumeration>
+									</typeDef>
+								</property>
+								<property name="Title" type="xs:string" lowerBound="0" nillable="true"/>
+							</typeDef>
+						</property>
+						<property name="SignerAuthority" lowerBound="0" upperBound="-1" nillable="true">
+							<typeDef xsi:type="ObjectType">
+								<property name="Authority" type="xs:string" lowerBound="0" nillable="true"/>
+								<property name="AuthorityScope" type="xs:integer" lowerBound="0" nillable="true"/>
+								<property name="Condition" type="xs:integer" lowerBound="0" nillable="true"/>
+								<property name="OrgAuthority" type="xs:string" lowerBound="0" nillable="true"/>
+							</typeDef>
+						</property>
+						<property name="SigningDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+						<property name="SignatureType">
+							<typeDef xsi:type="ValueType" base="xs:string">
+								<enumeration xsi:type="xs:string">1</enumeration>
+								<enumeration>2</enumeration>
+								<enumeration>3</enumeration>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="type_DocumentHistory" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Participant" type="d3p1:String64" lowerBound="0" nillable="true"/>
+		<property name="CompanyName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="PersonName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Status" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="StatusName" type="d3p1:String200" nillable="true"/>
+		<property name="Date" type="xs:dateTime" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String1000" lowerBound="0" nillable="true"/>
+		<property name="UserTitle" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentHistory" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentHistory" type="d3p1:type_DocumentHistory" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_DocumentType" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="DocumentTypeCode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Name" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SenderSignatureRequired" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="ReceiverSignatureRequired" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentType" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentType" type="d3p1:type_DocumentType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_ClientEdiCode" open="true" ordered="false">
+		<property name="OperatorName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IsCurrent" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="IsActive" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="IsDefault" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="OperatorId" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="Code" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="OperatorCode" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfClientEdiCode">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ClientEdiCode" type="d3p1:type_ClientEdiCode" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_ClientDiscovery" open="true" ordered="false">
+		<property name="Inn" type="xs:string" lowerBound="1" nillable="false" fixed="false"/>
+		<property name="Kpp" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfClientDiscovery" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ClientDiscovery" type="d3p1:type_ClientDiscovery" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_ClientRelation" open="true" ordered="false">
+		<property name="RelationId" type="xs:integer" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Status" type="xs:string" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Id" type="xs:integer" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Name" type="xs:string" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Code" type="xs:string" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Inn" type="xs:string" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Kpp" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfClientRelation" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ClientRelation" type="d3p1:type_ClientRelation" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_ArrayOfContractorDocumentTypes" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ContractorDocumentTypes" type="d3p1:type_ContractorDocumentTypes" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_ContractorDocumentTypes" open="true" ordered="false">
+		<property name="RelationId" type="xs:long" lowerBound="1" nillable="true"/>
+		<property name="ClientId" type="xs:long" lowerBound="1" nillable="true"/>
+		<property name="ShortName" type="xs:string" lowerBound="1" nillable="true"/>
+		<property name="Kpp" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Inn" type="xs:string" lowerBound="1" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="SenderDocumentTypes" type="d3p1:type_ArrayOfDocumentTypeClientRelationApi" lowerBound="0" upperBound="1" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ReceiverDocumentTypes" type="d3p1:type_ArrayOfDocumentTypeClientRelationApi" lowerBound="0" upperBound="1" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentTypeClientRelationApi" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="RelationDocumentType" type="d3p1:type_DocumentTypeClientRelationApi" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_DocumentTypeClientRelationApi" open="true" ordered="false">
+		<property name="Id" type="xs:integer" lowerBound="1" upperBound="1" nillable="false" fixed="false"/>
+		<property name="Code" type="xs:string" lowerBound="1" upperBound="1" nillable="false" fixed="false"/>
+		<property name="Name" type="xs:string" lowerBound="1" upperBound="1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_RelationRequest" open="true" ordered="false">
+		<property name="Contacts" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="Email" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverId" type="xs:long" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverInn" type="xs:string" lowerBound="0" upperBound="1" nillable="false" fixed="false"/>
+		<property name="ReceiverKpp" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverName" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+	</objectType>
+	<objectType name="type_RelationRequestDetails" open="true" ordered="false">
+		<property name="Contacts" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="Email" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="ReceiverInn" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverKpp" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="ReceiverName" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="AbonentCode" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="AcceptionDate" type="xs:dateTime" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="Id" type="xs:long" lowerBound="0"/>
+		<property name="IsLocal" type="xs:boolean" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Login" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="SenderInn" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="SenderKpp" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="SenderName" type="xs:string" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Side" type="xs:string" lowerBound="0" upperBound="1" nillable="false" fixed="false"/>
+		<property name="Status" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="StatusName" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+		<property name="UserId" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="UserName" type="xs:string" lowerBound="0" upperBound="1" nillable="true" fixed="false"/>
+	</objectType>
+	<objectType name="type_ArrayOfRelationRequestDetails" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="RelationRequestDetails" type="d3p1:type_RelationRequestDetails" lowerBound="0" upperBound="-1" nillable="true" fixed="false"/>
+	</objectType>
+	<objectType name="type_ArrayOfClassifierTemplate" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ClassifierTemplate" type="d3p1:type_ClassifierTemplate" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_Classifier" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long" lowerBound="1" nillable="false"/>
+		<property name="ClientId" type="xs:integer" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Name" type="d3p1:String256" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String512" lowerBound="0" nillable="true"/>
+		<property name="IsNameEditable" type="xs:boolean"/>
+	</objectType>
+	<objectType name="type_ArrayOfClassifier" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Classifier" type="d3p1:type_Classifier" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_ClassifierTemplate" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Name" type="d3p1:String128" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String512" lowerBound="0" nillable="true"/>
+		<property name="IsRequired" type="xs:boolean"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Participant" type="d3p1:Participant"/>
+		<property name="IsSelectOnly" type="xs:boolean"/>
+	</objectType>
+	<objectType name="type_ArrayOfClassifierValue" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ClassifierValue" type="d3p1:type_ClassifierValue" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="type_ClassifierValue" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long" lowerBound="1" nillable="false"/>
+		<property name="ClassifierId" type="xs:long" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Value" type="d3p1:String256" lowerBound="1" nillable="false"/>
+		<property name="IsActive" type="xs:boolean"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Comment" type="d3p1:String512" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfDocumentRoamingInfo" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="DocumentRoamingInfo" type="d3p1:type_DocumentRoamingInfo" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="type_DocumentRoamingInfo" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="DocumentType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StatusDate" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="RoamingStatus" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_Certificate" open="true" ordered="false" sequenced="true">
+		<property name="Id" type="xs:long" lowerBound="0" nillable="true"/>
+		<property name="Subject" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SerialNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Thumbprint" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="NotBefore" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="NotAfter" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="IsActive" type="xs:boolean" lowerBound="0" nillable="false" fixed="false"/>
+		<property name="Image" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_ArrayOfExternalServiceData" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="ExternalServiceData" type="d3p1:type_ExternalServiceData" lowerBound="0" upperBound="-1" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_ExternalServiceData" open="true" ordered="false">
+		<property name="ClientId" type="xs:integer" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="Data" lowerBound="0" nillable="false" fixed="false"/>
+		<property name="ServiceCode" type="xs:string" lowerBound="0" nillable="false" fixed="false"/>
+		<property name="ServiceName" type="xs:string" lowerBound="0" nillable="false" fixed="false"/>
+	</objectType>
+	<objectType name="type_VersionInfo" open="true" ordered="false" sequenced="true">
+		<property name="AssemblyVersion" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_DocumentSigner" open="true" ordered="false">
+		<property name="AccessMode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdViewType" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="StartDate" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="Uuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Inn" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="Person" type="d3p1:type_Person"/>
+		<property name="RegistrationRequisites" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SignerType" type="xs:string"/>
+		<property name="Title" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="InternalRegistrationNumber" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="InternalRegistrationDate" type="xs:date" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_SignatureMchdIdentify" open="true" ordered="false" sequenced="true">
+		<property name="MchdUuid" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdAccessMode" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdInn" type="d3p1:String12" lowerBound="0"/>
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="MchdConfidantInn" type="d3p1:String12" lowerBound="0" nillable="true"/>
+		<property name="MchdFileName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="MchdFile" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+		<property name="MchdSignature" type="xs:base64Binary" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="type_SignatureMchdIdentifyObject" open="true" ordered="false">
+		<property xmlns:d3p1="http://schemas.datacontract.org/2004/07/Korus.Eds.Api" name="SignatureMchdIdentify" type="d3p1:type_SignatureMchdIdentify" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+</package>

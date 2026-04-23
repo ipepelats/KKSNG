@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<CommandsVisibility>
+		<Command name="Catalog.ККСНГ_Организации.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ККСНГ_Контрагенты.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ККСНГ_НоменклатураКонтрагентов.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="Catalog.ККСНГ_Организации.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ККСНГ_Контрагенты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ККСНГ_НоменклатураКонтрагентов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ККСНГ_ОткрытьККСНГ_Организации">
+			<CommandGroup>CommandGroup.ККСНГ_ГруппаКомандНастройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ККСНГ_ОткрытьККСНГ_Контрагенты">
+			<CommandGroup>CommandGroup.ККСНГ_ГруппаКомандНастройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ККСНГ_СинхронизацияКонтрагентов">
+			<CommandGroup>CommandGroup.ККСНГ_ГруппаКомандНастройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ККСНГ_СопоставлениеНоменклатурыЭДО">
+			<CommandGroup>CommandGroup.ККСНГ_ГруппаКомандНастройки</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>CommandGroup.ККСНГ_ГруппаКомандНастройки</Group>
+	</GroupsOrder>
+</CommandInterface>

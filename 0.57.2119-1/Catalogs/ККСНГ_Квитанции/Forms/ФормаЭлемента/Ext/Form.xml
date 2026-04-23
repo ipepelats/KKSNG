@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Владелец" id="4">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<DropListButton>false</DropListButton>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаUUID" id="58">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа UUID</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа UUID</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаUUIDРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="DocumentId" id="10">
+					<DataPath>Объект.DocumentId</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="DocumentIdКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="DocumentIdРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="Uuid" id="13">
+					<DataPath>Объект.Uuid</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="UuidКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="UuidРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="ParentUuid" id="16">
+					<DataPath>Объект.ParentUuid</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ParentUuidКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ParentUuidРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДатаИд" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата ид</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата ид</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаИдРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<InputField name="Id" id="7">
+					<DataPath>Объект.Id</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="IdКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="IdРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Date" id="28">
+					<DataPath>Объект.Date</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="DateКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="DateРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="Direction" id="19">
+					<DataPath>Объект.Direction</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="DirectionКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="DirectionРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Type" id="22">
+			<DataPath>Объект.Type</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="TypeКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="TypeРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ExtendedType" id="25">
+			<DataPath>Объект.ExtendedType</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ExtendedTypeКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ExtendedTypeРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<LabelField name="NeedReply" id="31">
+			<DataPath>Объект.NeedReply</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="NeedReplyКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="NeedReplyРасширеннаяПодсказка" id="33"/>
+		</LabelField>
+		<Pages name="ГруппаСтраницы" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаПодписи" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница подписи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаСтраницаПодписиРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<Table name="Подписи" id="34">
+							<Representation>List</Representation>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Подписи</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПодписиКонтекстноеМеню" id="35"/>
+							<AutoCommandBar name="ПодписиКоманднаяПанель" id="36">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПодписиРасширеннаяПодсказка" id="37"/>
+							<SearchStringAddition name="ПодписиСтрокаПоиска" id="38">
+								<AdditionSource>
+									<Item>Подписи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодписиСтрокаПоискаКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ПодписиСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПодписиСостояниеПросмотра" id="41">
+								<AdditionSource>
+									<Item>Подписи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодписиСостояниеПросмотраКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ПодписиСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПодписиУправлениеПоиском" id="44">
+								<AdditionSource>
+									<Item>Подписи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодписиУправлениеПоискомКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ПодписиУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПодписиНомерСтроки" id="47">
+									<DataPath>Объект.Подписи.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ПодписиНомерСтрокиКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ПодписиНомерСтрокиРасширеннаяПодсказка" id="49"/>
+								</LabelField>
+								<InputField name="ПодписиUuid" id="50">
+									<DataPath>Объект.Подписи.Uuid</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ПодписиUuidКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ПодписиUuidРасширеннаяПодсказка" id="52"/>
+								</InputField>
+								<InputField name="ПодписиSignerCode" id="53">
+									<DataPath>Объект.Подписи.SignerCode</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ПодписиSignerCodeКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПодписиSignerCodeРасширеннаяПодсказка" id="55"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ККСНГ_Квитанции</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

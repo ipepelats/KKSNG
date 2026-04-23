@@ -1,0 +1,250 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="ККСНГ_DOCUMENT_1C">
+	<objectType name="Документ">
+		<property name="ДокументСсылка"/>
+		<property name="ДокументРеализации"/>
+		<property name="ИмяДокумента"/>
+		<property name="ПредставлениеЭД"/>
+		<property name="ПолучательЭД"/>
+		<property name="ОтправительЭД"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="СведенияОбОтправителеЭД" type="d3p1:Участник"/>
+		<property name="СсылкаСчетаФактуры"/>
+		<property name="ЭтоСводныйСчетФактура" type="xs:boolean"/>
+		<property name="ЭтоСФ" type="xs:boolean"/>
+		<property name="ЭтоАванс" type="xs:boolean"/>
+		<property name="ЭтоКомиссия" type="xs:boolean"/>
+		<property name="ЭтоИсправление" type="xs:boolean"/>
+		<property name="ЭтоКорректировка" type="xs:boolean"/>
+		<property name="ВидКорректировки"/>
+		<property name="Номер"/>
+		<property name="Дата"/>
+		<property name="НомерИсправления"/>
+		<property name="ДатаИсправления"/>
+		<property name="НомерИсходногоДокумента"/>
+		<property name="ДатаИсходногоДокумента"/>
+		<property name="НомерИсправленияИсходногоДокумента"/>
+		<property name="ДатаИсправленияИсходногоДокумента"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="Продавцы" type="d3p1:Участник" upperBound="-1"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="Покупатели" type="d3p1:Участник" upperBound="-1"/>
+		<property name="СодержаниеОперации"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="Грузоотправители" type="d3p1:Участник" upperBound="-1"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="Грузополучатели" type="d3p1:Участник" upperBound="-1"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="АдресДоставки" type="d3p1:Адрес"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="Перевозчик" type="d3p1:Участник"/>
+		<property name="СведенияОВалюте">
+			<typeDef xsi:type="ObjectType">
+				<property name="Код"/>
+				<property name="Наименование"/>
+				<property name="Курс"/>
+			</typeDef>
+		</property>
+		<property name="ПлатежноРасчетныеДокументы" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Номер"/>
+				<property name="Дата"/>
+			</typeDef>
+		</property>
+		<property name="СведенияОГосЗакупках">
+			<typeDef xsi:type="ObjectType">
+				<property name="ИдентификаторГосКонтракта"/>
+				<property name="НомерГосКонтракта"/>
+				<property name="ДатаГосКонтракта"/>
+				<property name="НомерЛицевогоСчетаПродавца"/>
+				<property name="КодБюджетнойКлассификацииПродавца"/>
+				<property name="КодЦели"/>
+				<property name="КазначействоПродавцаКод"/>
+				<property name="КазначействоПродавцаНаименование"/>
+			</typeDef>
+		</property>
+		<property name="СведенияОДоговоре" lowerBound="1" upperBound="1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Наименование"/>
+				<property name="Номер"/>
+				<property name="Дата"/>
+				<property name="ДопСведения"/>
+			</typeDef>
+		</property>
+		<property name="ТолькоУслуги" type="xs:boolean"/>
+		<property name="ЕстьМаркировка" type="xs:boolean"/>
+		<property name="ЕстьПрослеживание" type="xs:boolean"/>
+		<property name="ТоварыУслуги" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="НомерСтроки"/>
+				<property name="ИдентификаторСтроки"/>
+				<property name="НоменклатураСсылка"/>
+				<property name="Код"/>
+				<property name="КодКаталога"/>
+				<property name="Наименование"/>
+				<property name="Содержание"/>
+				<property name="ХарактеристикаНаименование"/>
+				<property name="Качество"/>
+				<property name="Артикул"/>
+				<property name="КодОКЕИ"/>
+				<property name="КодТНВЭД"/>
+				<property name="НаименованиеЕдиницыИзмерения"/>
+				<property name="СтавкаНДССтрокой"/>
+				<property name="Количество"/>
+				<property name="Цена"/>
+				<property name="СуммаНДС"/>
+				<property name="СуммаБезНДС"/>
+				<property name="СуммаСНДС"/>
+				<property name="ТипНоменклатуры"/>
+				<property name="ТипНоменклатурыДопИнфо"/>
+				<property name="НомерГТД"/>
+				<property name="КодСтраныПроисхождения"/>
+				<property name="НаименованиеСтраныПроисхождения"/>
+				<property name="РазницаСНДСУменьшение"/>
+				<property name="РазницаСНДСУвеличение"/>
+				<property name="СуммаСНДСДо"/>
+				<property name="РазницаНДСУменьшение"/>
+				<property name="РазницаНДСУвеличение"/>
+				<property name="СуммаНДСДо"/>
+				<property name="РазницаБезНДСУменьшение"/>
+				<property name="РазницаБезНДСУвеличение"/>
+				<property name="СуммаБезНДСДо"/>
+				<property name="ЦенаДо"/>
+				<property name="КоличествоДо"/>
+				<property name="СтавкаНДССтрокойДо"/>
+				<property name="КодОКЕИДо"/>
+				<property name="НаименованиеЕдиницыИзмеренияДо"/>
+				<property name="СведенияОМаркировке"/>
+				<property name="СведенияОМаркировкеДо"/>
+				<property name="СведенияОМаркировкеПосле"/>
+				<property name="СведенияОПрослеживаемости"/>
+				<property xmlns:d5p1="ККСНГ_DOCUMENT_1C" name="ИнфополяФХЖ2" type="d5p1:ТекстИнфТип" lowerBound="0" upperBound="-1"/>
+				<property name="ВидПродукцииИС"/>
+			</typeDef>
+		</property>
+		<property name="ОснованияПередачи" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Ссылка"/>
+				<property name="Наименование"/>
+				<property name="Номер"/>
+				<property name="Дата"/>
+				<property name="ДопСведения"/>
+			</typeDef>
+		</property>
+		<property name="ДокументыПередачи" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Ссылка"/>
+				<property name="Наименование"/>
+				<property name="Номер"/>
+				<property name="Дата"/>
+				<property name="ДопСведения"/>
+			</typeDef>
+		</property>
+		<property name="ДокументыПодтвержденияОтгрузки" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Наименование"/>
+				<property name="Номер"/>
+				<property name="Дата"/>
+			</typeDef>
+		</property>
+		<property name="ОснованияКорректировки" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="Наименование"/>
+				<property name="Номер"/>
+				<property name="Дата"/>
+				<property name="ДопСведения"/>
+			</typeDef>
+		</property>
+		<property name="ДатаОтгрузки"/>
+		<property name="ДатаНаправленияНаСогласование"/>
+		<property name="СведенияОЛицеПередавшемТовар">
+			<typeDef xsi:type="ObjectType">
+				<property name="Должность"/>
+				<property name="ОснованиеПолномочий"/>
+				<property xmlns:d5p1="ККСНГ_DOCUMENT_1C" name="ФИО" type="d5p1:ФИО"/>
+				<property name="ИНН"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ТранспортныеНакладные" type="d3p1:ТранспортнаяНакладная" lowerBound="0" upperBound="-1"/>
+		<property name="СведенияОТранспортировкеИГрузе"/>
+		<property name="ВсегоБезНДС"/>
+		<property name="ВсегоСНДС"/>
+		<property name="ВсегоНДС"/>
+		<property name="ВсегоКоличество"/>
+		<property name="ВсегоБезНДСУвеличение"/>
+		<property name="ВсегоСНДСУвеличение"/>
+		<property name="ВсегоНДСУвеличение"/>
+		<property name="ВсегоБезНДСУменьшение"/>
+		<property name="ВсегоСНДСУменьшение"/>
+		<property name="ВсегоНДСУменьшение"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ИнфополяФХЖ1" type="d3p1:ТекстИнфТип" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ИнфополяФХЖ3" type="d3p1:ТекстИнфТип" lowerBound="0" upperBound="-1"/>
+		<property name="БизнесПроцесс" nillable="true"/>
+		<property name="СоставительДокументаНаименование"/>
+		<property name="ОбстоятельстваФормированияСФ" type="xs:integer" default="0"/>
+		<property name="ВидыПродукцииИС"/>
+		<property name="АлкогольнаяПродукция" type="xs:boolean"/>
+		<property name="ТабачнаяПродукция" type="xs:boolean"/>
+		<property name="Нефтепродукты" type="xs:boolean"/>
+		<property name="ГосударственныйКонтроль"/>
+	</objectType>
+	<objectType name="Участник" ordered="true">
+		<property name="Ссылка"/>
+		<property name="Представление"/>
+		<property name="ПолноеНаименование"/>
+		<property name="СокращенноеНаименование"/>
+		<property name="КодПоОКПО"/>
+		<property name="ИНН"/>
+		<property name="КПП"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ФИО" type="d3p1:ФИО"/>
+		<property name="СвидетельствоРегистрацииИП"/>
+		<property name="ЭтоЮрЛицо"/>
+		<property name="Резидент"/>
+		<property name="КодВСтранеРегистрации"/>
+		<property name="Телефоны" lowerBound="0" upperBound="-1" form="Element">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="255"/>
+		</property>
+		<property name="Email" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="255"/>
+		</property>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="БанковскийСчет" type="d3p1:БанковскийСчет"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ЮридическийАдрес" type="d3p1:Адрес"/>
+		<property xmlns:d3p1="ККСНГ_DOCUMENT_1C" name="ФактическийАдрес" type="d3p1:Адрес"/>
+		<property name="СтруктурноеПодразделение"/>
+		<property name="ОнЖе"/>
+	</objectType>
+	<objectType name="ФИО">
+		<property name="Фамилия"/>
+		<property name="Имя"/>
+		<property name="Отчество"/>
+	</objectType>
+	<objectType name="Адрес">
+		<property name="Представление"/>
+		<property name="КодГАР"/>
+		<property name="КодСтраны"/>
+		<property name="Индекс"/>
+		<property name="КодРегион"/>
+		<property name="Район"/>
+		<property name="Город"/>
+		<property name="НаимРегион"/>
+		<property name="НаселПункт"/>
+		<property name="Улица"/>
+		<property name="Дом"/>
+		<property name="Корпус"/>
+		<property name="Кварт"/>
+	</objectType>
+	<objectType name="БанковскийСчет">
+		<property name="НомерСчета"/>
+		<property name="Банк"/>
+		<property name="НаименованиеБанка"/>
+		<property name="БИК"/>
+		<property name="КоррСчет"/>
+		<property name="Представление"/>
+		<property name="ГородБанка"/>
+	</objectType>
+	<objectType name="ТекстИнфТип">
+		<property name="Идентиф" lowerBound="1" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="50"/>
+		</property>
+		<property name="Значен" lowerBound="1" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2000"/>
+		</property>
+	</objectType>
+	<objectType name="ТранспортнаяНакладная">
+		<property name="Номер" type="xs:string" form="Attribute"/>
+		<property name="Дата" type="xs:string" form="Text"/>
+		<property name="РегНомер" type="xs:string" form="Attribute"/>
+	</objectType>
+</package>

@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="ПрофильНастройкиЭДО" id="1">
+					<DataPath>ПрофильНастройкиЭДО</DataPath>
+					<MarkRequiredComplete>true</MarkRequiredComplete>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>30</MaxWidth>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ПрофильНастройкиЭДОКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПрофильНастройкиЭДОРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ПрофильНастройкиЭДОПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Период" id="51">
+					<DataPath>Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>20</MaxWidth>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="OnChange">ПериодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="СохранитьАрхив" id="6">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СохранитьАрхив</CommandName>
+					<Font ref="style:NormalTextFont" kind="StyleItem"/>
+					<ExtendedTooltip name="СохранитьАрхивРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<Button name="ФормаОткрытьФормуНастроек" id="59">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ОткрытьФормуНастроек</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаОткрытьФормуНастроекРасширеннаяПодсказка" id="60"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокДокументов" id="8">
+			<Height>5</Height>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>СписокДокументов</DataPath>
+			<RowPictureDataPath>СписокДокументов.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокДокументовКонтекстноеМеню" id="9"/>
+			<AutoCommandBar name="СписокДокументовКоманднаяПанель" id="10">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокДокументовРасширеннаяПодсказка" id="11"/>
+			<SearchStringAddition name="СписокДокументовСтрокаПоиска" id="12">
+				<AdditionSource>
+					<Item>СписокДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовСтрокаПоискаКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="СписокДокументовСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДокументовСостояниеПросмотра" id="15">
+				<AdditionSource>
+					<Item>СписокДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовСостояниеПросмотраКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="СписокДокументовСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДокументовУправлениеПоиском" id="18">
+				<AdditionSource>
+					<Item>СписокДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДокументовУправлениеПоискомКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="СписокДокументовУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокДокументовВыбор</Event>
+				<Event name="OnGetDataAtServer">СписокДокументовПриПолученииДанныхНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокДокументовReceiveDate" id="27">
+					<DataPath>СписокДокументов.ReceiveDate</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата получения</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="СписокДокументовReceiveDateКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СписокДокументовReceiveDateРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<LabelField name="СписокДокументовТипДокумента" id="45">
+					<DataPath>СписокДокументов.ТипДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип документа</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ContextMenu name="СписокДокументовТипДокументаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="СписокДокументовТипДокументаРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="СписокДокументовStatusName" id="33">
+					<DataPath>СписокДокументов.StatusName</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Width>20</Width>
+					<ContextMenu name="СписокДокументовStatusNameКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="СписокДокументовStatusNameРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="СписокДокументовNumber" id="24">
+					<DataPath>СписокДокументов.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="СписокДокументовNumberКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокДокументовNumberРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<LabelField name="СписокДокументовКонтрагент" id="30">
+					<DataPath>СписокДокументов.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<ContextMenu name="СписокДокументовКонтрагентКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СписокДокументовКонтрагентРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<LabelField name="СписокДокументовTotalSum" id="36">
+					<DataPath>СписокДокументов.TotalSum</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ContextMenu name="СписокДокументовTotalSumКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СписокДокументовTotalSumРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+				<InputField name="СписокДокументовВыгружен" id="39">
+					<DataPath>СписокДокументов.Выгружен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="СписокДокументовВыгруженКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СписокДокументовВыгруженРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<LabelField name="СписокДокументовСтандартнаяКартинка" id="48">
+					<DataPath>СписокДокументов.DefaultPicture</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СписокДокументовСтандартнаяКартинкаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СписокДокументовСтандартнаяКартинкаРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<ProgressBarField name="ПрогрессБар" id="56">
+			<DataPath>ПрогрессБар</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+			<Width>30</Width>
+			<MaxHeight>1</MaxHeight>
+			<ShowPercent>true</ShowPercent>
+			<ContextMenu name="ПрогрессБарКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ПрогрессБарРасширеннаяПодсказка" id="58"/>
+		</ProgressBarField>
+		<LabelDecoration name="ДекорацияИтоги" id="64">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранено на диск:  %1</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияИтогиКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="ДекорацияИтогиРасширеннаяПодсказка" id="66"/>
+		</LabelDecoration>
+		<LabelDecoration name="НадписьКаталогВыгрузкиЭкспорта" id="61">
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="НадписьКаталогВыгрузкиЭкспортаКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="НадписьКаталогВыгрузкиЭкспортаРасширеннаяПодсказка" id="63"/>
+			<Events>
+				<Event name="Click">НадписьКаталогВыгрузкиЭкспортаНажатие</Event>
+			</Events>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПрофильНастройкиЭДО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ККСНГ_Организации</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПрофильНастройкиЭДО</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СписокДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~СписокДокументов.DocumentTypeCode</Field>
+				<Field>~СписокДокументов.Маркированный</Field>
+				<Field>~СписокДокументов.СтатусЦРПТ</Field>
+				<Field>СписокДокументов.Id</Field>
+				<Field>СписокДокументов.TypeName</Field>
+				<Field>СписокДокументов.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ККСНГ_ЭлектронныеДокументы.Ссылка КАК Ссылка,
+	ККСНГ_ЭлектронныеДокументы.Id КАК Id,
+	ККСНГ_ЭлектронныеДокументы.TotalSum КАК TotalSum,
+	ККСНГ_ЭлектронныеДокументы.StatusName КАК StatusName,
+	ВЫБОР
+		КОГДА ККСНГ_Организации.ИдентификаторСК = ККСНГ_ЭлектронныеДокументы.ReceiverId
+			ТОГДА ККСНГ_ЭлектронныеДокументы.SenderName
+		ИНАЧЕ ККСНГ_ЭлектронныеДокументы.ReceiverName
+	КОНЕЦ КАК Контрагент,
+	ККСНГ_ЭлектронныеДокументы.ReceiveDate КАК ReceiveDate,
+	ВЫБОР
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_DOP"
+			ТОГДА "УПД.ДОП"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_SF"
+			ТОГДА "УПД.СЧФ"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_SF_DOP"
+			ТОГДА "УПД.СЧФДОП"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_CSF"
+			ТОГДА "УКД.КСЧФ"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_DIC"
+			ТОГДА "УКД.ДИС"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_CSF_DIC"
+			ТОГДА "УКД.КСЧФДИС"
+		ИНАЧЕ ККСНГ_ЭлектронныеДокументы.TypeName
+	КОНЕЦ КАК ТипДокумента,
+	ВЫРАЗИТЬ("" КАК СТРОКА(500)) КАК Выгружен,
+	ВЫРАЗИТЬ(ККСНГ_ЭлектронныеДокументы.Number КАК СТРОКА(255)) КАК Number,
+	ККСНГ_ЭлектронныеДокументы.TypeName КАК TypeName
+ИЗ
+	Справочник.ККСНГ_Организации КАК ККСНГ_Организации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ККСНГ_ЭлектронныеДокументы КАК ККСНГ_ЭлектронныеДокументы
+		ПО ККСНГ_Организации.КодУчастникаЭДО = ККСНГ_ЭлектронныеДокументы.КодЭДОВладельца
+ГДЕ
+	ККСНГ_Организации.Ссылка = &amp;ПрофильНастройкиЭДО
+	И ККСНГ_ЭлектронныеДокументы.ReceiveDate МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ККСНГ_ЭлектронныеДокументы.DocumentTypeCode В(&amp;ТипыДокументов)
+
+СГРУППИРОВАТЬ ПО
+	ККСНГ_ЭлектронныеДокументы.Ссылка,
+	ККСНГ_ЭлектронныеДокументы.Id,
+	ККСНГ_ЭлектронныеДокументы.TotalSum,
+	ККСНГ_ЭлектронныеДокументы.StatusName,
+	ККСНГ_ЭлектронныеДокументы.ReceiveDate,
+	ВЫРАЗИТЬ(ККСНГ_ЭлектронныеДокументы.Number КАК СТРОКА(255)),
+	ВЫБОР
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_DOP"
+			ТОГДА "УПД.ДОП"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_SF"
+			ТОГДА "УПД.СЧФ"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UPD_SF_DOP"
+			ТОГДА "УПД.СЧФДОП"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_CSF"
+			ТОГДА "УКД.КСЧФ"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_DIC"
+			ТОГДА "УКД.ДИС"
+		КОГДА ККСНГ_ЭлектронныеДокументы.DocumentTypeCode = "UCD_CSF_DIC"
+			ТОГДА "УКД.КСЧФДИС"
+		ИНАЧЕ ККСНГ_ЭлектронныеДокументы.TypeName
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ККСНГ_Организации.ИдентификаторСК = ККСНГ_ЭлектронныеДокументы.ReceiverId
+			ТОГДА ККСНГ_ЭлектронныеДокументы.SenderName
+		ИНАЧЕ ККСНГ_ЭлектронныеДокументы.ReceiverName
+	КОНЕЦ,
+	ККСНГ_ЭлектронныеДокументы.TypeName</QueryText>
+				<MainTable>Catalog.ККСНГ_ЭлектронныеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ReceiveDate</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>4e9e3fc7-49f3-4115-b09a-99440311b815</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="АдресРезультатаЗапросаПакетов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата запроса пакетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период создания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИдентификаторЗаданияЭкспорта" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания экспорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресРезультатаФоновогоЗадания" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессБар" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокДокументовВыгружен</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокДокументов.Выгружен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Архив сохранен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#339966</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокДокументовВыгружен</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокДокументов.Выгружен</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Архив сохранен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьАрхив" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить архив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьАрхив</Action>
+		</Command>
+		<Command name="ОткрытьФормуНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки сохранения архивов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ККСНГ_Настройки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФормуНастроек</Action>
+		</Command>
+	</Commands>
+</Form>

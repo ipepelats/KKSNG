@@ -1,0 +1,1108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите загружаемые папки</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="216">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="217"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройкиПапок" id="1">
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаНастройкиПапокРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВыбор" id="200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыборРасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<Button name="ВыбратьВсеПапкиЗагружаемые" id="15">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыбратьВсеПапки</CommandName>
+							<ExtendedTooltip name="ВыбратьВсеПапкиЗагружаемыеРасширеннаяПодсказка" id="16"/>
+						</Button>
+						<Button name="ОтменитьВыборВсехПапокЗагружаемых" id="17">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОтменитьВыборВсехПапок</CommandName>
+							<ExtendedTooltip name="ОтменитьВыборВсехПапокЗагружаемыхРасширеннаяПодсказка" id="18"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапка" id="3">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПапка" id="5">
+							<Width>33</Width>
+							<Height>2</Height>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Папки сервиса ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FBED9E</BackColor>
+							<ContextMenu name="ДекорацияПапкаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ДекорацияПапкаРасширеннаяПодсказка" id="7"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаOnProcess" id="30">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаOnProcessРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьOnProcess" id="32">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На обработку</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьOnProcessКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НадписьOnProcessРасширеннаяПодсказка" id="34"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьOnProcess" id="35">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьOnProcessРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьOnProcess" id="37">
+									<DataPath>ЗагрузитьOnProcess</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьOnProcessКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ЗагрузитьOnProcessРасширеннаяПодсказка" id="39"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоOnProcess" id="40">
+									<ContextMenu name="КоличествоOnProcessКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="КоличествоOnProcessРасширеннаяПодсказка" id="42"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="УспешноOnProcess" id="48">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноOnProcessКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="УспешноOnProcessРасширеннаяПодсказка" id="50"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОшибкаOnProcess" id="51">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаOnProcessКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ОшибкаOnProcessРасширеннаяПодсказка" id="53"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressOnProcess" id="226">
+							<DataPath>ProgressOnProcess</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressOnProcessКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="ProgressOnProcessРасширеннаяПодсказка" id="228"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаNoRoute" id="54">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаNoRouteРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьNoRoute" id="56">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Без маршрута</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьNoRouteКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="НадписьNoRouteРасширеннаяПодсказка" id="58"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьNoRoute" id="59">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьNoRouteРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьNoRoute" id="61">
+									<DataPath>ЗагрузитьNoRoute</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьNoRouteКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ЗагрузитьNoRouteРасширеннаяПодсказка" id="63"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоNoRoute" id="64">
+									<ContextMenu name="КоличествоNoRouteКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="КоличествоNoRouteРасширеннаяПодсказка" id="66"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="УспешноNoRoute" id="72">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноNoRouteКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="УспешноNoRouteРасширеннаяПодсказка" id="74"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОшибкаNoRoute" id="75">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаNoRouteКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ОшибкаNoRouteРасширеннаяПодсказка" id="77"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressNoRoute" id="229">
+							<DataPath>ProgressNoRoute</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressNoRouteКонтекстноеМеню" id="230"/>
+							<ExtendedTooltip name="ProgressNoRouteРасширеннаяПодсказка" id="231"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаIn" id="78">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаInРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьIn" id="80">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьInКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="НадписьInРасширеннаяПодсказка" id="82"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьIn" id="83">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьInРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьIn" id="85">
+									<DataPath>ЗагрузитьIn</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьInКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ЗагрузитьInРасширеннаяПодсказка" id="87"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоIn" id="88">
+									<ContextMenu name="КоличествоInКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="КоличествоInРасширеннаяПодсказка" id="90"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ОшибкаIn" id="96">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаInКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ОшибкаInРасширеннаяПодсказка" id="98"/>
+						</LabelDecoration>
+						<LabelDecoration name="УспешноIn" id="99">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноInКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="УспешноInРасширеннаяПодсказка" id="101"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressIn" id="232">
+							<DataPath>ProgressIn</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressInКонтекстноеМеню" id="233"/>
+							<ExtendedTooltip name="ProgressInРасширеннаяПодсказка" id="234"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаOut" id="102">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаOutРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьOut" id="104">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исходящие</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьOutКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="НадписьOutРасширеннаяПодсказка" id="106"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьOut" id="107">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьOutРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьOut" id="109">
+									<DataPath>ЗагрузитьOut</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьOutКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ЗагрузитьOutРасширеннаяПодсказка" id="111"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоOut" id="112">
+									<ContextMenu name="КоличествоOutКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="КоличествоOutРасширеннаяПодсказка" id="114"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ОшибкаOut" id="120">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаOutКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ОшибкаOutРасширеннаяПодсказка" id="122"/>
+						</LabelDecoration>
+						<LabelDecoration name="УспешноOut" id="123">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноOutКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="УспешноOutРасширеннаяПодсказка" id="125"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressOut" id="235">
+							<DataPath>ProgressOut</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressOutКонтекстноеМеню" id="236"/>
+							<ExtendedTooltip name="ProgressOutРасширеннаяПодсказка" id="237"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаFavorites" id="126">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаFavoritesРасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьFavorites" id="128">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Избранное</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьFavoritesКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="НадписьFavoritesРасширеннаяПодсказка" id="130"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьFavorites" id="131">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьFavoritesРасширеннаяПодсказка" id="132"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьFavorites" id="133">
+									<DataPath>ЗагрузитьFavorites</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьFavoritesКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ЗагрузитьFavoritesРасширеннаяПодсказка" id="135"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоFavorites" id="136">
+									<ContextMenu name="КоличествоFavoritesКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="КоличествоFavoritesРасширеннаяПодсказка" id="138"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="УспешноFavorites" id="147">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноFavoritesКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="УспешноFavoritesРасширеннаяПодсказка" id="149"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОшибкаFavorites" id="144">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаFavoritesКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="ОшибкаFavoritesРасширеннаяПодсказка" id="146"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressFavorites" id="238">
+							<DataPath>ProgressFavorites</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressFavoritesКонтекстноеМеню" id="239"/>
+							<ExtendedTooltip name="ProgressFavoritesРасширеннаяПодсказка" id="240"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаDraft" id="150">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаDraftРасширеннаяПодсказка" id="151"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьDraft" id="152">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Черновики</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьDraftКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="НадписьDraftРасширеннаяПодсказка" id="154"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьDraft" id="155">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьDraftРасширеннаяПодсказка" id="156"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьDraft" id="157">
+									<DataPath>ЗагрузитьDraft</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьDraftКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ЗагрузитьDraftРасширеннаяПодсказка" id="159"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоDraft" id="160">
+									<ContextMenu name="КоличествоDraftКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="КоличествоDraftРасширеннаяПодсказка" id="162"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ОшибкаDraft" id="171">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаDraftКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ОшибкаDraftРасширеннаяПодсказка" id="173"/>
+						</LabelDecoration>
+						<LabelDecoration name="УспешноDraft" id="168">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноDraftКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="УспешноDraftРасширеннаяПодсказка" id="170"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressDraft" id="223">
+							<DataPath>ProgressDraft</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressDraftКонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="ProgressDraftРасширеннаяПодсказка" id="225"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаProcessed" id="174">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаProcessedРасширеннаяПодсказка" id="175"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьProcessed" id="176">
+							<Width>13</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обработанные</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>#FFFAD9</BackColor>
+							<ContextMenu name="НадписьProcessedКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="НадписьProcessedРасширеннаяПодсказка" id="178"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЗагрузитьProcessed" id="179">
+							<Width>19</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#FFFAD9</BackColor>
+							<ExtendedTooltip name="ГруппаЗагрузитьProcessedРасширеннаяПодсказка" id="180"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагрузитьProcessed" id="181">
+									<DataPath>ЗагрузитьProcessed</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ЗагрузитьProcessedКонтекстноеМеню" id="182"/>
+									<ExtendedTooltip name="ЗагрузитьProcessedРасширеннаяПодсказка" id="183"/>
+								</CheckBoxField>
+								<LabelDecoration name="КоличествоProcessed" id="184">
+									<ContextMenu name="КоличествоProcessedКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="КоличествоProcessedРасширеннаяПодсказка" id="186"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="УспешноProcessed" id="195">
+							<Visible>false</Visible>
+							<TextColor>#009646</TextColor>
+							<ContextMenu name="УспешноProcessedКонтекстноеМеню" id="196"/>
+							<ExtendedTooltip name="УспешноProcessedРасширеннаяПодсказка" id="197"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОшибкаProcessed" id="192">
+							<Visible>false</Visible>
+							<TextColor>#FF0000</TextColor>
+							<ContextMenu name="ОшибкаProcessedКонтекстноеМеню" id="193"/>
+							<ExtendedTooltip name="ОшибкаProcessedРасширеннаяПодсказка" id="194"/>
+						</LabelDecoration>
+						<ProgressBarField name="ProgressProcessed" id="241">
+							<DataPath>ProgressProcessed</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ProgressProcessedКонтекстноеМеню" id="242"/>
+							<ExtendedTooltip name="ProgressProcessedРасширеннаяПодсказка" id="243"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПрогрессБарОбщий" id="246">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прогресс бар общий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прогресс бар общий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрогрессБарОбщийРасширеннаяПодсказка" id="247"/>
+					<ChildItems>
+						<ProgressBarField name="ПрогрессБар" id="248">
+							<DataPath>ПрогрессБар</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<Width>33</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ПрогрессБарКонтекстноеМеню" id="249"/>
+							<ExtendedTooltip name="ПрогрессБарРасширеннаяПодсказка" id="250"/>
+						</ProgressBarField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="209">
+			<Width>33</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="210"/>
+			<ChildItems>
+				<Button name="ЗагрузитьДокументы" id="198">
+					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>Form.Command.ЗагрузитьДокументы</CommandName>
+					<ExtendedTooltip name="ЗагрузитьДокументыРасширеннаяПодсказка" id="199"/>
+				</Button>
+				<Button name="ПерейтиКЭлектроннымДокументам" id="218">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>Form.Command.ПерейтиКЭлектроннымДокументам</CommandName>
+					<ExtendedTooltip name="ПерейтиКЭлектроннымДокументамРасширеннаяПодсказка" id="219"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ЗагрузкаЗавершенаСОшибками" id="211">
+			<Visible>false</Visible>
+			<Width>33</Width>
+			<TextColor>#FF0000</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произошли ошибки при загрузке. Повторите, пожалуйста, попытку позднее или обратитесь в техническую поддержку.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗагрузкаЗавершенаСОшибкамиКонтекстноеМеню" id="212"/>
+			<ExtendedTooltip name="ЗагрузкаЗавершенаСОшибкамиРасширеннаяПодсказка" id="213"/>
+		</LabelDecoration>
+		<LabelDecoration name="ЗагрузкаЗавершенаУспешно" id="204">
+			<Visible>false</Visible>
+			<Width>33</Width>
+			<TextColor>#009646</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка документов завершена.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗагрузкаЗавершенаУспешноКонтекстноеМеню" id="205"/>
+			<ExtendedTooltip name="ЗагрузкаЗавершенаУспешноРасширеннаяПодсказка" id="206"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ККСНГ_ЗагрузкаДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗагруженныеDraft" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные Draft</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеFavorites" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные Favorites</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеIn" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные In</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеNoRoute" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные NoRoute</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеOnProcess" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные OnProcess</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеOut" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные Out</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженныеProcessed" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загруженные Processed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьDraft" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Черновики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьFavorites" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Избранное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьIn" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьNoRoute" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьOnProcess" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На обработку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьOut" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходящие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузитьProcessed" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработанные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрофильНастройкиЭДО" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ККСНГ_Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>ПрофильНастройкиЭДО</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="АдресРезультата" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИДФоновогоЗадания" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИД Фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressDraft" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress draft</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressProcessed" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress Processed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressFavorites" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress Favorites</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressOut" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress Out</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressNoRoute" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress NoRoute</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressIn" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress In</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ProgressOnProcess" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Progress OnProcess</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессБар" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогресс бар</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьВсеПапки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все папки для загрузки документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсеПапки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтменитьВыборВсехПапок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выбор всех</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выбор всех папок для загрузки документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьВыборВсехПапок</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить список документов из сервиса ЭДО.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ККСНГ_Синхронизировать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьДокументы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПерейтиКЭлектроннымДокументам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к электронным документам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к электронным документам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиКЭлектроннымДокументам</Action>
+		</Command>
+	</Commands>
+</Form>

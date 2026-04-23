@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="1">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Номенклатура" id="4">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаДанныеКонтрагента" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные по номенклатуре контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа данные контрагента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДанныеКонтрагентаРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Table name="ДанныеКонтрагента" id="7">
+					<Representation>List</Representation>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ДанныеКонтрагента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные по номенклатуре контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДанныеКонтрагентаКонтекстноеМеню" id="8"/>
+					<AutoCommandBar name="ДанныеКонтрагентаКоманднаяПанель" id="9"/>
+					<ExtendedTooltip name="ДанныеКонтрагентаРасширеннаяПодсказка" id="10"/>
+					<SearchStringAddition name="ДанныеКонтрагентаСтрокаПоиска" id="11">
+						<AdditionSource>
+							<Item>ДанныеКонтрагента</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеКонтрагентаСтрокаПоискаКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ДанныеКонтрагентаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДанныеКонтрагентаСостояниеПросмотра" id="14">
+						<AdditionSource>
+							<Item>ДанныеКонтрагента</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеКонтрагентаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ДанныеКонтрагентаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДанныеКонтрагентаУправлениеПоиском" id="17">
+						<AdditionSource>
+							<Item>ДанныеКонтрагента</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеКонтрагентаУправлениеПоискомКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="ДанныеКонтрагентаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<ColumnGroup name="ДанныеКонтрагентаГруппа1" id="43">
+							<ExtendedTooltip name="ДанныеКонтрагентаГруппа1РасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<InputField name="ДанныеКонтрагентаНаименование" id="23">
+									<DataPath>Объект.ДанныеКонтрагента.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ДанныеКонтрагентаНаименованиеКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДанныеКонтрагентаНаименованиеРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<ColumnGroup name="ДанныеКонтрагентаГруппа2" id="45">
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ДанныеКонтрагентаГруппа2РасширеннаяПодсказка" id="46"/>
+									<ChildItems>
+										<InputField name="ДанныеКонтрагентаКод" id="26">
+											<DataPath>Объект.ДанныеКонтрагента.Код</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>10</Width>
+											<ContextMenu name="ДанныеКонтрагентаКодКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ДанныеКонтрагентаКодРасширеннаяПодсказка" id="28"/>
+										</InputField>
+										<InputField name="ДанныеКонтрагентаАртикул" id="29">
+											<DataPath>Объект.ДанныеКонтрагента.Артикул</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>15</Width>
+											<ContextMenu name="ДанныеКонтрагентаАртикулКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ДанныеКонтрагентаАртикулРасширеннаяПодсказка" id="31"/>
+										</InputField>
+										<InputField name="ДанныеКонтрагентаХарактеристика" id="35">
+											<DataPath>Объект.ДанныеКонтрагента.Характеристика</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>20</Width>
+											<ContextMenu name="ДанныеКонтрагентаХарактеристикаКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ДанныеКонтрагентаХарактеристикаРасширеннаяПодсказка" id="37"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ДанныеКонтрагентаГруппа3" id="47">
+							<ExtendedTooltip name="ДанныеКонтрагентаГруппа3РасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<InputField name="ДанныеКонтрагентаЕдИзм" id="32">
+									<DataPath>Объект.ДанныеКонтрагента.ЕдИзм</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>10</Width>
+									<ContextMenu name="ДанныеКонтрагентаЕдИзмКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДанныеКонтрагентаЕдИзмРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="ДанныеКонтрагентаВид" id="40">
+									<DataPath>Объект.ДанныеКонтрагента.Вид</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ДанныеКонтрагентаВидКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ДанныеКонтрагентаВидРасширеннаяПодсказка" id="42"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ККСНГ_НоменклатураКонтрагентов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

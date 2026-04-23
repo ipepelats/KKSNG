@@ -1,0 +1,14 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.cc.org/Errors">
+	<objectType name="BodyRoot">
+		<property xmlns:d3p1="http://www.cc.org/Errors" name="v1" type="d3p1:type_exception" lowerBound="0" localName="exception"/>
+		<property xmlns:d3p1="http://www.cc.org/Errors" name="v2" type="d3p1:type_Error" lowerBound="0" localName="Error"/>
+	</objectType>
+	<objectType name="type_exception" open="true">
+		<property name="ErrorNumber" type="xs:string" lowerBound="0" form="Attribute" localName="errorNumber"/>
+		<property name="Message" type="xs:string" lowerBound="0" form="Text"/>
+	</objectType>
+	<objectType name="type_Error" open="true">
+		<property name="ErrorNumber" type="xs:string" lowerBound="0"/>
+		<property name="Message" type="xs:string" lowerBound="0"/>
+	</objectType>
+</package>

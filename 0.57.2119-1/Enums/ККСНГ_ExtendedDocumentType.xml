@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Enum uuid="dda7351b-a0f9-407e-a9bb-cad72420f44a">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ККСНГ_ExtendedDocumentType" category="Ref">
+				<xr:TypeId>080624c8-6883-4ba9-91b8-30960e13113a</xr:TypeId>
+				<xr:ValueId>003b6836-3d95-4234-a8ba-9c50c91bcaf0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ККСНГ_ExtendedDocumentType" category="Manager">
+				<xr:TypeId>30ed56d1-38d4-4d73-aa15-37e9331c6f0a</xr:TypeId>
+				<xr:ValueId>77e06195-56c3-4b14-ba97-64dc403acd68</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ККСНГ_ExtendedDocumentType" category="List">
+				<xr:TypeId>4a203152-acbc-43c2-9440-d685f3385a82</xr:TypeId>
+				<xr:ValueId>a85e7108-3f1f-413a-af2a-4960782511b1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ККСНГ_ExtendedDocumentType</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширенный тип документа</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="cc2b15de-5022-4443-892e-fc05b6f6936b">
+				<Properties>
+					<Name>Document</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ (основной документ)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="29ed12a0-9cb9-43bc-8adf-d24e81078fbe">
+				<Properties>
+					<Name>ReceiveConfirmation</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение получения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5d4f767e-126f-4567-9d5e-8d8e999d6fbb">
+				<Properties>
+					<Name>SendConfirmation</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="941f9c63-59bc-418d-8268-08c1ae892b4f">
+				<Properties>
+					<Name>ReceiveNotificationOfReceiveConfirmation</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении подтверждения получения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4d33e409-6bb5-4ff3-b0c3-f235e0a1b0d4">
+				<Properties>
+					<Name>ReceiveNotificationOfDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="aa9fae6b-72b2-412f-a8a7-cf891e05f6c5">
+				<Properties>
+					<Name>SendConfirmationOfReceiveNotificationOfDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки извещения о получении документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="38bfb395-0c33-4d9c-b6a9-b7e3a0b0a4b4">
+				<Properties>
+					<Name>ReceiveNotificationOfSendConfirmation</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении подтверждения отправки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c09a98ac-c6fc-4765-a5b3-7628121aed10">
+				<Properties>
+					<Name>ReceiveNotificationOfSendConfirmationOfReceiveNotificationOfDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении подтверждения отправки извещения о получении документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c6197d05-49ee-44bf-beb4-373b278badb8">
+				<Properties>
+					<Name>ClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомление об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7ea3e4a7-c9bb-48df-8346-90149751b275">
+				<Properties>
+					<Name>ReceiveNotificationOfClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении уведомления об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e8dfc93b-34e6-4222-aee1-0c750d55c964">
+				<Properties>
+					<Name>AcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9bdd5ebb-1804-418d-bcf7-e33930008f28">
+				<Properties>
+					<Name>RejectSignature</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отказ от подписи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cd4e7dc9-f3cb-419d-ada4-0af856c55c16">
+				<Properties>
+					<Name>AvoidanceRequest</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предложение об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="eb749fed-2b81-451c-a01b-58ee823636be">
+				<Properties>
+					<Name>AvoidanceRequestClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомление об уточнении к предложению об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1f8fac0b-b877-4b2c-a801-51d7729460e4">
+				<Properties>
+					<Name>AvoidanceRequestAcceptSignature</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подпись к предложению об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b39db5ca-f142-40f1-8edd-4103df99b649">
+				<Properties>
+					<Name>SpecifyingDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сведения к документу о приемке и (или) расхождениях</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="025f1025-b482-4a10-b9bf-14dd47329b6e">
+				<Properties>
+					<Name>ReceiveConfirmationOfReceiveNotificationOfDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение получения извещения о получении документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bb0a5317-19e9-4362-8dc4-39f1a6c61638">
+				<Properties>
+					<Name>ReceiveConfirmationOfClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение получения уведомления об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="df363b6b-379c-449a-9b0d-d77a79f554ff">
+				<Properties>
+					<Name>SendConfirmationOfClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки уведомления об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f4c5bc08-9ddf-477a-bd17-c95a21e93b26">
+				<Properties>
+					<Name>SendConfirmationOfClarificationNoticeForOperator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки уведомления об уточнении (ПДО УОУ), направляемое в адрес оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c486e023-0f62-4b07-866c-2904b9b7b8c4">
+				<Properties>
+					<Name>SendConfirmationForOperator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки (ПДО СЧФ), направляемое в адрес оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="22b740ae-825b-4519-85fb-28acb2b9cc05">
+				<Properties>
+					<Name>SendConfirmationOfReceiveNotificationOfDocumentForOperator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение отправки извещения о получении документа (ПДО ИОП СЧФ), направляемое в адрес оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0cdd4cf7-8797-4e4c-a8c0-a4c24c3425c9">
+				<Properties>
+					<Name>BlrAvoidanceRequest</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предложение аннулирования транспортной накладной Республики Беларусь</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6d436fd8-e551-440f-acc4-27959f4bc088">
+				<Properties>
+					<Name>BlrAvoidanceConfirmation</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение аннулирования транспортной накладной Республики Беларусь</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="655f4ca2-a3f4-4b1c-85ef-9fc683696055">
+				<Properties>
+					<Name>SendConfirmationOfAcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение даты отправки документа покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4b6a5132-f6ce-4f61-9691-4727360540f4">
+				<Properties>
+					<Name>ReceiveConfirmationOfAcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение даты получения документа покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="508523cd-a3f7-46b5-b77a-c5edcad0b750">
+				<Properties>
+					<Name>ReceiveNotificationOfSendConfirmationOfAcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении подтверждения даты отправки документа покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="42381cd5-259a-4a9f-bc0f-b16a25f0ff91">
+				<Properties>
+					<Name>SendConfirmationOfAcceptDocumentForOperator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение даты отправки документа покупателя (титул покупателя), направляемое в адрес оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6c2f205e-0673-42d5-b337-05893f37a15f">
+				<Properties>
+					<Name>ReceiveNotificationOfAcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении документа покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="78a331fc-199f-4f1b-be78-9f688510fe46">
+				<Properties>
+					<Name>ReceiveConfirmationOfSpecifyingDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение получения дополнительного документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="14a953ce-8c2d-42fd-bf41-bcf96e3503b2">
+				<Properties>
+					<Name>SendConfirmationOfSpecifyingDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение даты отправки дополнительного документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a5b55054-07d8-401b-ba08-37852628c020">
+				<Properties>
+					<Name>SendConfirmationOfSpecifyingDocumentForOperator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение даты отправки дополнительного документа, направляемое в адрес оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="458aab4c-14d9-4a08-bd25-a9c377635b39">
+				<Properties>
+					<Name>ReceiveNotificationOfSpecifyingDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извещение о получении дополнительного документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d4c7748a-e909-4ca1-89aa-eba7f3ba364e">
+				<Properties>
+					<Name>UniversalMessageFnsReceiveNotificationOfDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией ИОП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b0cb2b03-e8f3-40a0-a2be-353e62be04d9">
+				<Properties>
+					<Name>UniversalMessageFnsClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией уведомление об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9913b6c5-9754-4f11-8d30-43cad8784eaa">
+				<Properties>
+					<Name>UniversalMessageFnsAvoidanceRequestClarificationNotice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией уведомление об уточнении к предложению об  аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fbcc5de6-64e9-4de8-a9ef-165b5d147161">
+				<Properties>
+					<Name>UniversalMessageFnsReceiveNotificationOfAcceptDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией извещение о получении документа покупателя (титул покупателя)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="efb3111c-de99-4e81-a100-134ad4d97e73">
+				<Properties>
+					<Name>UniversalMessageFnsReceiveNotificationOfSpecifyingDocument</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией извещение о получении дополнительного документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2076e190-6d08-4552-9656-351bdaf1fe4e">
+				<Properties>
+					<Name>UniversalMessageFnsReceiveNotificationOfOther</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией извещение о получении для остальных случаев</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1a1aa6cd-f529-420f-ab65-6e4d11800e87">
+				<Properties>
+					<Name>UniversalMessageFnsClarificationNoticeOfOther</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Универсальное сообщение с функцией уведомление об уточнении (для остальных случаев)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

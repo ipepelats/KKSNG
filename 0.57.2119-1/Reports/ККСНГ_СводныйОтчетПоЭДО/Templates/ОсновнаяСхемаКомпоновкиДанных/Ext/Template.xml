@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ContractDescription</dataPath>
+			<field>ContractDescription</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Filename</dataPath>
+			<field>Filename</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StatusName</dataPath>
+			<field>StatusName</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Actions</dataPath>
+			<field>Actions</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Id</dataPath>
+			<field>Id</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Number</dataPath>
+			<field>Number</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отправитель</dataPath>
+			<field>Отправитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Description_</dataPath>
+			<field>Description_</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DocumentRelationType</dataPath>
+			<field>DocumentRelationType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TypeId</dataPath>
+			<field>TypeId</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TypeName</dataPath>
+			<field>TypeName</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DocumentTypeCode</dataPath>
+			<field>DocumentTypeCode</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодЭДОВладельца</dataPath>
+			<field>КодЭДОВладельца</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ReceiverId</dataPath>
+			<field>ReceiverId</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BarcodeType</dataPath>
+			<field>BarcodeType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BarcodeValue</dataPath>
+			<field>BarcodeValue</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SenderId</dataPath>
+			<field>SenderId</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатель</dataPath>
+			<field>Получатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>NetSum</dataPath>
+			<field>NetSum</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Status</dataPath>
+			<field>Status</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ParticipantId</dataPath>
+			<field>ParticipantId</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>IsMarked</dataPath>
+			<field>IsMarked</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ParticipantName</dataPath>
+			<field>ParticipantName</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Date</dataPath>
+			<field>Date</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвязанныйДокумент</dataPath>
+			<field>СвязанныйДокумент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StatusChanged</dataPath>
+			<field>StatusChanged</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>RequestSign</dataPath>
+			<field>RequestSign</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VatSum</dataPath>
+			<field>VatSum</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TotalSum</dataPath>
+			<field>TotalSum</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Created</dataPath>
+			<field>Created</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлектронныйДокумент</dataPath>
+			<field>ЭлектронныйДокумент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SendDate</dataPath>
+			<field>SendDate</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ReceiveDate</dataPath>
+			<field>ReceiveDate</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ContractNumber</dataPath>
+			<field>ContractNumber</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>IsDocflowCompleted</dataPath>
+			<field>IsDocflowCompleted</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Comment</dataPath>
+			<field>Comment</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ContractDate</dataPath>
+			<field>ContractDate</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Type</dataPath>
+			<field>Type</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСвязанногоДокумента</dataPath>
+			<field>ТипСвязанногоДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BuyerCode</dataPath>
+			<field>BuyerCode</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>FormType</dataPath>
+			<field>FormType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SenderName</dataPath>
+			<field>SenderName</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SellerCode</dataPath>
+			<field>SellerCode</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>FormatVersion</dataPath>
+			<field>FormatVersion</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>RevokeReason</dataPath>
+			<field>RevokeReason</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>IsRoaming</dataPath>
+			<field>IsRoaming</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>IsPrintable</dataPath>
+			<field>IsPrintable</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>RejectReason</dataPath>
+			<field>RejectReason</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ReceiverName</dataPath>
+			<field>ReceiverName</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ExistRouteSigner</dataPath>
+			<field>ExistRouteSigner</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументОснование</dataPath>
+			<field>ДокументОснование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PackageId</dataPath>
+			<field>PackageId</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеЭД</dataPath>
+			<field>НаправлениеЭД</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МойКонтрагент</dataPath>
+			<field>МойКонтрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мой контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Организации.Ссылка КАК Организация
+ПОМЕСТИТЬ ВТ_ДоступныеОрганизации	
+ИЗ
+	Справочник.Организации КАК Организации;
+
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ККСНГ_ЭлектронныеДокументы.Ссылка КАК Ссылка,
+	ККСНГ_ЭлектронныеДокументы.ВерсияДанных КАК ВерсияДанных,
+	ККСНГ_ЭлектронныеДокументы.ПометкаУдаления КАК ПометкаУдаления,
+	ККСНГ_ЭлектронныеДокументы.Наименование КАК Наименование,
+	ККСНГ_ЭлектронныеДокументы.Id КАК Id,
+	ККСНГ_ЭлектронныеДокументы.TypeId КАК TypeId,
+	ККСНГ_ЭлектронныеДокументы.TypeName КАК TypeName,
+	ККСНГ_ЭлектронныеДокументы.DocumentTypeCode КАК DocumentTypeCode,
+	ККСНГ_ЭлектронныеДокументы.Description_ КАК Description_,
+	ККСНГ_ЭлектронныеДокументы.BarcodeType КАК BarcodeType,
+	ККСНГ_ЭлектронныеДокументы.BarcodeValue КАК BarcodeValue,
+	ККСНГ_ЭлектронныеДокументы.SenderId КАК SenderId,
+	ККСНГ_ЭлектронныеДокументы.ReceiverId КАК ReceiverId,
+	ККСНГ_ЭлектронныеДокументы.ParticipantId КАК ParticipantId,
+	ККСНГ_ЭлектронныеДокументы.ParticipantName КАК ParticipantName,
+	ККСНГ_ЭлектронныеДокументы.Status КАК Status,
+	ККСНГ_ЭлектронныеДокументы.Date КАК Date,
+	ККСНГ_ЭлектронныеДокументы.RequestSign КАК RequestSign,
+	ККСНГ_ЭлектронныеДокументы.Number КАК Number,
+	ККСНГ_ЭлектронныеДокументы.NetSum КАК NetSum,
+	ККСНГ_ЭлектронныеДокументы.VatSum КАК VatSum,
+	ККСНГ_ЭлектронныеДокументы.TotalSum КАК TotalSum,
+	ККСНГ_ЭлектронныеДокументы.Actions КАК Actions,
+	ККСНГ_ЭлектронныеДокументы.IsMarked КАК IsMarked,
+	ККСНГ_ЭлектронныеДокументы.Created КАК Created,
+	ККСНГ_ЭлектронныеДокументы.SendDate КАК SendDate,
+	ККСНГ_ЭлектронныеДокументы.ReceiveDate КАК ReceiveDate,
+	ККСНГ_ЭлектронныеДокументы.IsDocflowCompleted КАК IsDocflowCompleted,
+	ККСНГ_ЭлектронныеДокументы.Comment КАК Comment,
+	ККСНГ_ЭлектронныеДокументы.ContractNumber КАК ContractNumber,
+	ККСНГ_ЭлектронныеДокументы.ContractDate КАК ContractDate,
+	ККСНГ_ЭлектронныеДокументы.Type КАК Type,
+	ККСНГ_ЭлектронныеДокументы.FormType КАК FormType,
+	ККСНГ_ЭлектронныеДокументы.SellerCode КАК SellerCode,
+	ККСНГ_ЭлектронныеДокументы.BuyerCode КАК BuyerCode,
+	ККСНГ_ЭлектронныеДокументы.FormatVersion КАК FormatVersion,
+	ККСНГ_ЭлектронныеДокументы.RevokeReason КАК RevokeReason,
+	ККСНГ_ЭлектронныеДокументы.ContractDescription КАК ContractDescription,
+	ККСНГ_ЭлектронныеДокументы.IsRoaming КАК IsRoaming,
+	ККСНГ_ЭлектронныеДокументы.IsPrintable КАК IsPrintable,
+	ККСНГ_ЭлектронныеДокументы.StatusName КАК StatusName,
+	ККСНГ_ЭлектронныеДокументы.RejectReason КАК RejectReason,
+	ККСНГ_ЭлектронныеДокументы.Filename КАК Filename,
+	ККСНГ_ЭлектронныеДокументы.SenderName КАК SenderName,
+	ККСНГ_ЭлектронныеДокументы.ReceiverName КАК ReceiverName,
+	ККСНГ_ЭлектронныеДокументы.ExistRouteSigner КАК ExistRouteSigner,
+	ККСНГ_ЭлектронныеДокументы.DocumentRelationType КАК DocumentRelationType,
+	ККСНГ_ЭлектронныеДокументы.StatusChanged КАК StatusChanged,
+	ККСНГ_ЭлектронныеДокументы.PackageId КАК PackageId,
+	ККСНГ_ЭлектронныеДокументы.ДокументОснование КАК ДокументОснование,
+	ККСНГ_ЭлектронныеДокументы.Отправитель КАК Отправитель,
+	ККСНГ_ЭлектронныеДокументы.Получатель КАК Получатель,
+	ККСНГ_ЭлектронныеДокументы.КодЭДОВладельца КАК КодЭДОВладельца,
+	ККСНГ_ЭлектронныеДокументы.НаправлениеЭД КАК НаправлениеЭД,
+	ККСНГ_ЭлектронныеДокументы.Организация КАК Организация,
+	ККСНГ_ЭлектронныеДокументы.Контрагент КАК Контрагент,
+	ККСНГ_ЭлектронныеДокументы.Предопределенный КАК Предопределенный,
+	ККСНГ_ЭлектронныеДокументы.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ККСНГ_ЭлектронныеДокументы.Представление КАК Представление,
+	ККСНГ_СвязанныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
+	ККСНГ_СвязанныеДокументы.СвязанныйДокумент КАК СвязанныйДокумент,
+	ККСНГ_СвязанныеДокументы.Дата КАК Дата,
+	ККСНГ_СвязанныеДокументы.ТипСвязанногоДокумента КАК ТипСвязанногоДокумента,
+	ККСНГ_Контрагенты.Ссылка КАК МойКонтрагент
+ИЗ
+	Справочник.ККСНГ_ЭлектронныеДокументы КАК ККСНГ_ЭлектронныеДокументы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДоступныеОрганизации КАК ВТ_ДоступныеОрганизации
+		ПО ВТ_ДоступныеОрганизации.Организация = ККСНГ_ЭлектронныеДокументы.Организация 
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ККСНГ_СвязанныеДокументы КАК ККСНГ_СвязанныеДокументы
+		ПО ККСНГ_СвязанныеДокументы.ЭлектронныйДокумент = ККСНГ_ЭлектронныеДокументы.ГУИД
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ККСНГ_Контрагенты КАК ККСНГ_Контрагенты
+		ПО ККСНГ_ЭлектронныеДокументы.КодЭДОВладельца = ККСНГ_Контрагенты.Владелец.КодУчастникаЭДО
+			И (ВЫБОР
+				КОГДА ККСНГ_ЭлектронныеДокументы.КодЭДОВладельца = ККСНГ_ЭлектронныеДокументы.SellerCode
+					ТОГДА ККСНГ_ЭлектронныеДокументы.BuyerCode
+				ИНАЧЕ ККСНГ_ЭлектронныеДокументы.SellerCode
+			КОНЕЦ = ККСНГ_Контрагенты.КодУчастникаЭДО)
+</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Документ1С</dataPath>
+		<expression>РегистрыСведений.ККСНГ_СвязанныеДокументы.СсылкаНаСвязанныйДокумент(СвязанныйДокумент, ТипСвязанногоДокумента)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ 1С</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПринятКУчету</dataPath>
+		<expression>ЗначениеЗаполнено(СвязанныйДокумент)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Принят к учету</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоДокументов</dataPath>
+		<expression>Id</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество документов</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>NetSum</dataPath>
+		<expression>Сумма(NetSum)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>TotalSum</dataPath>
+		<expression>Сумма(TotalSum)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>VatSum</dataPath>
+		<expression>Сумма(VatSum)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоДокументов</dataPath>
+		<expression>Количество(Различные КоличествоДокументов)</expression>
+		<group>Документ1С</group>
+		<group>КоличествоДокументов</group>
+		<group>ПринятКУчету</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>ПериодОтправки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отправки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОтправкиНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отправки начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтправки.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОтправкиКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отправки конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтправки.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодСоздания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период создания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодСоздания.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаСозданияКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата создания конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодСоздания.ДатаОкончания</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ККСНГ_СводныйОтчетПоЭДО</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводный отчет по ЭДО</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ ЭДО</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>SendDate</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МойКонтрагент.Контрагент</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент 1С</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TypeName</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Number</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Created</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>StatusName</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>IsDocflowCompleted</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПринятКУчету</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ1С</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Comment</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Id</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаправлениеЭД</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TotalSum</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Created</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.ДатаСозданияНачало</dcsset:right>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата создания с</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Created</dcsset:left>
+					<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.ДатаСозданияКонец</dcsset:right>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата создания по</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>daef48cc-992a-403c-9b38-ced3691934a7</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтправкиНачало</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодСоздания</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>2b3ebfc2-bcd4-4293-928e-0aaeed84a6d3</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>НаправлениеЭД</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>StatusName</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Ссылка</dcsset:field>
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ ЭДО</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>SendDate</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>МойКонтрагент.Контрагент</dcsset:field>
+									<dcsset:lwsTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагент 1С</v8:content>
+										</v8:item>
+									</dcsset:lwsTitle>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>TypeName</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Number</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Created</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>IsDocflowCompleted</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПринятКУчету</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Документ1С</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Comment</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Id</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>TotalSum</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,139 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="KKSNG_BILL_UVHD" elementFormQualified="true" attributeFormQualified="false">
+	<property xmlns:d2p1="KKSNG_BILL_UVHD" name="Request" type="d2p1:Request"/>
+	<objectType name="PostalAddressType">
+		<property name="Street">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="260"/>
+		</property>
+		<property name="City">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="PostalCode">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="6"/>
+		</property>
+		<property name="Country">
+			<typeDef xsi:type="ObjectType">
+				<property name="isoCountryCode" lowerBound="0" fixed="true" default="RU" form="Attribute">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+						<enumeration>RU</enumeration>
+					</typeDef>
+				</property>
+				<property name="__content" type="xs:string" form="Text"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Request">
+		<property name="InvoiceDetailRequest">
+			<typeDef xsi:type="ObjectType">
+				<property name="InvoiceDetailRequestHeader">
+					<typeDef xsi:type="ObjectType">
+						<property name="invoiceID" lowerBound="1" form="Attribute">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+						</property>
+						<property name="purpose" type="xs:string" lowerBound="0" fixed="false" default="standard" form="Attribute"/>
+						<property name="operation" type="xs:string" lowerBound="0" fixed="false" default="new" form="Attribute"/>
+						<property name="invoiceDate" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+						<property name="Extrinsic" upperBound="-1">
+							<typeDef xsi:type="ObjectType">
+								<property name="name" lowerBound="1" form="Attribute">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+										<enumeration>Num_invoice</enumeration>
+										<enumeration>Date_invoice</enumeration>
+									</typeDef>
+								</property>
+								<property name="__content" type="xs:string" form="Text"/>
+							</typeDef>
+						</property>
+						<property name="InvoicePartner" upperBound="2">
+							<typeDef xsi:type="ObjectType">
+								<property name="Contact">
+									<typeDef xsi:type="ObjectType">
+										<property name="role" lowerBound="1" form="Attribute">
+											<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+												<enumeration>billTo</enumeration>
+												<enumeration>remitTo</enumeration>
+											</typeDef>
+										</property>
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="Name" type="d11p1:Description"/>
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="PostalAddress" type="d11p1:PostalAddressType"/>
+										<property name="Extrinsic" upperBound="-1">
+											<typeDef xsi:type="ObjectType">
+												<property name="name" lowerBound="1" form="Attribute">
+													<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+														<enumeration>INN</enumeration>
+														<enumeration>KPP</enumeration>
+														<enumeration>IBAN</enumeration>
+														<enumeration>BIK</enumeration>
+														<enumeration>NameBank</enumeration>
+														<enumeration xsi:type="xs:string">CorrAcc</enumeration>
+													</typeDef>
+												</property>
+												<property name="__content" type="xs:string" form="Text"/>
+											</typeDef>
+										</property>
+									</typeDef>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="InvoiceDetailOrder">
+					<typeDef xsi:type="ObjectType">
+						<property name="InvoiceDetailOrderInfo"/>
+						<property name="InvoiceDetailItem" upperBound="-1">
+							<typeDef xsi:type="ObjectType">
+								<property name="invoiceLineNumber" type="xs:string" lowerBound="1" form="Attribute"/>
+								<property name="quantity" type="xs:float" lowerBound="0" form="Attribute"/>
+								<property name="UnitOfMeasure" type="xs:string" lowerBound="0"/>
+								<property name="UnitPrice" lowerBound="0">
+									<typeDef xsi:type="ObjectType">
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="Money" type="d11p1:Money" lowerBound="0"/>
+									</typeDef>
+								</property>
+								<property name="SubtotalAmount">
+									<typeDef xsi:type="ObjectType">
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="Money" type="d11p1:Money"/>
+									</typeDef>
+								</property>
+								<property name="Tax">
+									<typeDef xsi:type="ObjectType">
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="Money" type="d11p1:Money" nillable="false"/>
+										<property xmlns:d11p1="KKSNG_BILL_UVHD" name="Description" type="d11p1:Description"/>
+									</typeDef>
+								</property>
+								<property xmlns:d9p1="KKSNG_BILL_UVHD" name="Distribution" type="d9p1:Description"/>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="InvoiceDetailSummary">
+					<typeDef xsi:type="ObjectType">
+						<property name="SubtotalAmount">
+							<typeDef xsi:type="ObjectType">
+								<property xmlns:d9p1="KKSNG_BILL_UVHD" name="Money" type="d9p1:Money"/>
+							</typeDef>
+						</property>
+						<property name="TotalAmountWithoutTax">
+							<typeDef xsi:type="ObjectType">
+								<property xmlns:d9p1="KKSNG_BILL_UVHD" name="Money" type="d9p1:Money"/>
+							</typeDef>
+						</property>
+						<property name="Tax">
+							<typeDef xsi:type="ObjectType">
+								<property xmlns:d9p1="KKSNG_BILL_UVHD" name="Money" type="d9p1:Money"/>
+								<property xmlns:d9p1="KKSNG_BILL_UVHD" name="Description" type="d9p1:Description"/>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Money">
+		<property name="currency" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="__content" type="xs:float" nillable="true" form="Text"/>
+	</objectType>
+	<objectType name="Description">
+		<property name="__content" type="xs:string" form="Text"/>
+		<property name="lang" type="xs:string" default="ru-ru" form="Attribute"/>
+	</objectType>
+</package>
