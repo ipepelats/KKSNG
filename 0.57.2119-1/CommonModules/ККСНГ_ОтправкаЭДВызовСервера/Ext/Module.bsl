@@ -39,7 +39,16 @@
 		DocumentCard.ParentDocumentId = ДанныеДокумента.ИдентификаторСвязанногоДокумента;
 		DocumentCard.Relation = ДанныеДокумента.ТипСвязи;
 	Иначе
-		DocumentCard.Relation = "Other";
+		// ККСНГ: Пробуем указать связь "Invoice", чтобы документы склеились в пакет
+		Если ЕстьДопВложения Тогда
+			DocumentCard.Relation = "Invoice";
+			Попытка
+				DocumentCard.Вставить("CreatePackage", Истина); // Попытка форсировать пакет
+			Исключение
+			КонецПопытки;
+		Иначе
+			DocumentCard.Relation = "Other";
+		КонецЕсли;
 	КонецЕсли;
 	
 	// Вложения и доп. реквизиты
