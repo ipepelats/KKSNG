@@ -1988,13 +1988,21 @@
 		attachment.Вставить("Content", ККСНГ_ДанныеФайла);
 		attachment.Вставить("Filename", Вложение.ИмяФайла);
 		
-		// ККСНГ: Автоматическое определение MIME-типа
+		// ККСНГ: Улучшенное определение типа для роуминга
 		ККСНГ_Расширение = НРег(Вложение.Расширение);
 		Если ККСНГ_Расширение = "pdf" Тогда
 			attachment.Вставить("MimeType", "application/pdf");
+			attachment.Вставить("TypeCode", "BILL"); // Официальный тип "Счет"
+		ИначеЕсли ККСНГ_Расширение = "txt" Тогда
+			attachment.Вставить("MimeType", "text/plain");
+			attachment.Вставить("TypeCode", "BILL"); // Для теста тоже ставим BILL
 		Иначе
 			attachment.Вставить("MimeType", "application/xml");
+			attachment.Вставить("TypeCode", "Other");
 		КонецЕсли;
+		
+		// Явная связь
+		attachment.Вставить("Relation", "Invoice");
 						
 		МассивВложенийКОтправке.Добавить(attachment);
 		
